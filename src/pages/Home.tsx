@@ -40,13 +40,15 @@ const Home = () => {
           }}
         />
         <div className="container mx-auto px-4 z-10 text-center text-white">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Precision CNC Cutting
-            <br />
-            <span className="text-accent">You Can Trust</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Professional laser cutting, milling, and plasma services for industrial and custom projects
+          <div className="mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4">
+              Precision Laser Cutting
+              <br />
+              <span className="text-accent">For Premium Designs</span>
+            </h1>
+          </div>
+          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
+            Custom Islamic calligraphy, decorative panels, and architectural metalwork crafted with precision
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="default">

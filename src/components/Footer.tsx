@@ -7,11 +7,11 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-primary mb-4">
-              CNC<span className="text-accent">Pro</span>
+            <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
+              ROUTERS
             </h3>
             <p className="text-sm text-muted-foreground">
-              Precision CNC cutting services for all your manufacturing needs.
+              Premium CNC laser cutting for architectural and decorative metalwork.
             </p>
           </div>
 
@@ -63,7 +63,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} CNCPro. All rights reserved.
+            © {new Date().getFullYear()} ROUTERS CNC Laser. All rights reserved.
           </p>
         </div>
       </div>

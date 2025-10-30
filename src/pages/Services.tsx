@@ -7,27 +7,27 @@ const Services = () => {
   const services = [
     {
       icon: Zap,
-      title: "Laser Cutting",
-      description: "High-precision laser cutting for metals, plastics, and composites. Perfect for intricate designs and tight tolerances.",
-      capabilities: ["Steel up to 1 inch", "Aluminum and stainless", "Acrylic and plastics", "Complex geometries"],
+      title: "Islamic Calligraphy Art",
+      description: "Exquisite laser-cut Islamic calligraphy and religious artwork in premium metal finishes. Custom designs available.",
+      capabilities: ["Ayatul Kursi designs", "99 Names of Allah", "Custom Arabic text", "Gold & silver finishes"],
     },
     {
       icon: Cog,
-      title: "CNC Milling",
-      description: "Multi-axis CNC milling for complex parts and prototypes. From single pieces to production runs.",
-      capabilities: ["3-axis and 5-axis milling", "Aluminum, steel, brass", "Prototyping services", "Production quantities"],
+      title: "Decorative Metal Panels",
+      description: "Architectural laser-cut screens and partitions with intricate geometric patterns for modern interiors.",
+      capabilities: ["Islamic geometric patterns", "Custom partition designs", "Various metal options", "Indoor & outdoor use"],
     },
     {
       icon: Scissors,
-      title: "Plasma Cutting",
-      description: "Heavy-duty plasma cutting for thick materials and large-format projects. Fast and economical.",
-      capabilities: ["Steel up to 2 inches", "Large format sheets", "Quick turnaround", "Cost-effective solution"],
+      title: "Custom Name Plates",
+      description: "Personalized metal nameplates with premium finishes. Perfect for homes, offices, and special occasions.",
+      capabilities: ["Brass inlay on wood", "Acrylic combinations", "Custom fonts & designs", "Small to large sizes"],
     },
     {
       icon: Settings,
-      title: "Custom Fabrication",
-      description: "End-to-end fabrication services including bending, welding, and finishing for complete solutions.",
-      capabilities: ["Sheet metal bending", "TIG/MIG welding", "Powder coating", "Assembly services"],
+      title: "Architectural Elements",
+      description: "Designer furniture pieces and architectural elements including shelves, brackets, and decorative items.",
+      capabilities: ["Wall-mounted shelves", "Custom brackets", "Signage solutions", "Furniture accents"],
     },
   ];
 
@@ -37,9 +37,14 @@ const Services = () => {
       
       <main className="container mx-auto px-4 pt-32 pb-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4">Our Services</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive CNC cutting and fabrication services to bring your designs to life
+          <div className="inline-block mb-4">
+            <span className="text-sm font-semibold text-accent uppercase tracking-wider">What We Offer</span>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Precision Services
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            From intricate Islamic art to modern architectural elements, we bring your vision to life with precision
           </p>
         </div>
 
