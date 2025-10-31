@@ -156,9 +156,14 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-accent mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      (123) 456-7890
-                    </a>
+                    <div className="space-y-1">
+                      <a href="tel:+917012530677" className="block text-muted-foreground hover:text-primary transition-colors">
+                        +91 70125 30677
+                      </a>
+                      <a href="tel:+919497379175" className="block text-muted-foreground hover:text-primary transition-colors">
+                        +91 94973 79175
+                      </a>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -170,8 +175,8 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-accent mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <a href="mailto:info@cncpro.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      info@cncpro.com
+                    <a href="mailto:routersjaalicutting@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
+                      routersjaalicutting@gmail.com
                     </a>
                   </div>
                 </div>
@@ -184,10 +189,10 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-accent mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-muted-foreground">
-                      123 Industrial Avenue<br />
-                      Manufacturing District<br />
-                      Your City, ST 12345
+                    <p className="text-muted-foreground text-sm">
+                      Under Railway Over Bridge<br />
+                      Angadippuram, Perinthalmanna<br />
+                      Malappuram, Kerala 679321
                     </p>
                   </div>
                 </div>

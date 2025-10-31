@@ -31,33 +31,40 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <div className="flex flex-col gap-2">
-              <Link to="/location" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Location
-              </Link>
-              <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Get Quote
-              </Link>
+            <h3 className="font-bold text-lg mb-4">Contact</h3>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start gap-2">
+                <Phone className="w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <a href="tel:+917012530677" className="hover:text-primary transition-colors">+91 70125 30677</a>
+                  <br />
+                  <a href="tel:+919497379175" className="hover:text-primary transition-colors">+91 94973 79175</a>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 flex-shrink-0" />
+                <a href="mailto:routersjaalicutting@gmail.com" className="hover:text-primary transition-colors break-all">
+                  routersjaalicutting@gmail.com
+                </a>
+              </div>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <span>Under Railway Over Bridge, Angadippuram, Perinthalmanna, Malappuram, Kerala 679321</span>
+              </div>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Get in Touch</h4>
-            <div className="flex flex-col gap-3">
-              <a href="tel:+1234567890" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Phone size={16} />
-                (123) 456-7890
-              </a>
-              <a href="mailto:info@cncpro.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Mail size={16} />
-                info@cncpro.com
-              </a>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin size={16} />
-                123 Industrial Ave
-              </div>
-            </div>
+            <h3 className="font-bold text-lg mb-4">Working Hours</h3>
+            <p className="text-sm mb-2">Monday - Saturday</p>
+            <p className="text-sm text-muted-foreground mb-3">9:00 AM - 7:00 PM</p>
+            <p className="text-sm mb-2">Sunday</p>
+            <p className="text-sm text-muted-foreground mb-4">Closed</p>
+            <Link to="/contact">
+              <button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-lg transition-colors font-semibold">
+                Get in Touch
+              </button>
+            </Link>
           </div>
         </div>
 

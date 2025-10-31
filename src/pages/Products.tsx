@@ -9,52 +9,121 @@ import ayatulKursi from "@/assets/products/ayatul-kursi.jpg";
 import customNameplate from "@/assets/products/custom-nameplate.jpg";
 import wallShelf from "@/assets/products/wall-shelf.jpg";
 import asmaulHusna from "@/assets/products/asmaul-husna.jpg";
+import jaaliPanel from "@/assets/products/jaali-panel.jpg";
+import sportsTrophies from "@/assets/products/sports-trophies.jpg";
+import bismillahCalligraphy from "@/assets/products/bismillah-calligraphy.jpg";
+import luxuryDoor from "@/assets/products/luxury-door.jpg";
+import customNameplateDarul from "@/assets/products/custom-nameplate-darul.jpg";
+import nameplateMeghmalhar from "@/assets/products/nameplate-meghmalhar.jpg";
+import bismillahGold from "@/assets/products/bismillah-gold.jpg";
 
 const Products = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const products = [
     {
-      title: "Islamic Calligraphy Wall Art",
-      category: "Religious Decor",
-      description: "Exquisite laser-cut Islamic calligraphy in premium metal finish",
-      image: islamicCalligraphy,
+      title: "Islamic Jaali Partition Panel",
+      category: "Interior Jaali",
+      description: "Exquisite geometric pattern partition panel for elegant interior spaces",
+      image: jaaliPanel,
       featured: true,
+      materials: "Wood, MDF, Plywood"
     },
     {
-      title: "Ayatul Kursi Artwork",
-      category: "Islamic Art",
-      description: "Beautiful Ayatul Kursi design with intricate details",
+      title: "Ayatul Kursi Wall Artwork",
+      category: "Islamic Calligraphy",
+      description: "Premium wooden Ayatul Kursi with gold acrylic inlay finish",
       image: ayatulKursi,
       featured: true,
+      materials: "Wood, Acrylic"
     },
     {
-      title: "Asmaul Husna - 99 Names",
+      title: "Asmaul Husna - 99 Names of Allah",
       category: "Wall Calligraphy",
-      description: "Complete 99 Names of Allah in honeycomb pattern design",
+      description: "Complete 99 Names displayed in honeycomb hexagonal pattern",
       image: asmaulHusna,
       featured: true,
+      materials: "PVC, Acrylic"
+    },
+    {
+      title: "Premium Sports Trophies",
+      category: "Custom Awards",
+      description: "Elegant laser-cut acrylic trophies for sports achievements",
+      image: sportsTrophies,
+      featured: false,
+      materials: "Acrylic, Wood Base"
+    },
+    {
+      title: "Bismillah Calligraphy Art",
+      category: "Islamic Wall Art",
+      description: "Beautiful Bismillah calligraphy with gold finish on premium wood",
+      image: bismillahCalligraphy,
+      featured: false,
+      materials: "Wood, Gold Acrylic"
+    },
+    {
+      title: "Luxury Carved Wooden Door",
+      category: "Architectural",
+      description: "Intricately carved luxury door with traditional craftsmanship",
+      image: luxuryDoor,
+      featured: false,
+      materials: "Premium Wood"
+    },
+    {
+      title: "Custom Wooden Nameplate - Darul Hamd",
+      category: "Personalized Signs",
+      description: "Handcrafted wooden nameplate with engraved brass lettering",
+      image: customNameplateDarul,
+      featured: false,
+      materials: "Wood, Brass Inlay"
+    },
+    {
+      title: "Elegant Name Sign - Meghmalhar",
+      category: "Custom Nameplates",
+      description: "Premium wooden nameplate with decorative brass inlay elements",
+      image: nameplateMeghmalhar,
+      featured: false,
+      materials: "Wood, Brass"
+    },
+    {
+      title: "Bismillah Golden Calligraphy",
+      category: "Islamic Decor",
+      description: "Stunning gold-finished Bismillah wall art on dark backdrop",
+      image: bismillahGold,
+      featured: false,
+      materials: "Wood, Gold Acrylic"
+    },
+    {
+      title: "Islamic Calligraphy Collection",
+      category: "Religious Art",
+      description: "Hand-finished Islamic calligraphy pieces with premium craftsmanship",
+      image: islamicCalligraphy,
+      featured: false,
+      materials: "Wood, Acrylic"
     },
     {
       title: "Geometric Decorative Panels",
-      category: "Architectural",
-      description: "Modern Islamic geometric patterns for partitions and screens",
+      category: "Room Partitions",
+      description: "Modern Islamic geometric patterns for elegant space division",
       image: decorativePanel,
       featured: false,
+      materials: "MDF, Plywood, Multiwood"
     },
     {
-      title: "Custom Name Plates",
+      title: "Custom Brass Nameplate",
       category: "Personalized",
-      description: "Elegant brass inlay nameplates on premium wood",
+      description: "Elegant brass inlay nameplates on premium wood finish",
       image: customNameplate,
       featured: false,
+      materials: "Wood, Brass"
     },
     {
       title: "Designer Wall Shelves",
-      category: "Furniture",
-      description: "Modern geometric shelving units with clean lines",
+      category: "Interior Furniture",
+      description: "Modern geometric shelving units with clean contemporary lines",
       image: wallShelf,
       featured: false,
+      materials: "Wood, MDF"
     },
   ];
 
@@ -99,9 +168,10 @@ const Products = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="text-sm text-accent font-medium mb-2 uppercase tracking-wide">{product.category}</div>
-                  <h3 className="text-xl font-bold mb-2">{product.title}</h3>
-                  <p className="text-muted-foreground text-sm">{product.description}</p>
+                  <div className="text-sm text-accent font-semibold mb-2 uppercase tracking-wide">{product.category}</div>
+                  <h3 className="text-xl font-bold mb-2 text-foreground">{product.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-3">{product.description}</p>
+                  <div className="text-xs text-primary font-medium">Materials: {product.materials}</div>
                 </div>
               </Card>
             ))}
@@ -127,9 +197,10 @@ const Products = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 <div className="p-6">
-                  <div className="text-sm text-accent font-medium mb-2 uppercase tracking-wide">{product.category}</div>
-                  <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
-                  <p className="text-muted-foreground text-sm">{product.description}</p>
+                  <div className="text-sm text-accent font-semibold mb-2 uppercase tracking-wide">{product.category}</div>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">{product.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-3">{product.description}</p>
+                  <div className="text-xs text-primary font-medium">Materials: {product.materials}</div>
                 </div>
               </Card>
             ))}

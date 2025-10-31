@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Scissors, Cog, Zap, Settings } from "lucide-react";
+import { Package, Layers, Ruler, Settings, FileText, Zap } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -7,28 +7,70 @@ const Services = () => {
   const services = [
     {
       icon: Zap,
-      title: "Islamic Calligraphy Art",
-      description: "Exquisite laser-cut Islamic calligraphy and religious artwork in premium metal finishes. Custom designs available.",
-      capabilities: ["Ayatul Kursi designs", "99 Names of Allah", "Custom Arabic text", "Gold & silver finishes"],
+      title: "CNC & Laser Cutting",
+      description: "High-precision cutting for wood, acrylic, and composite materials with tolerances up to 0.1mm",
+      capabilities: [
+        "Wood, Plywood, Multiwood",
+        "Acrylic & PVC materials",
+        "Complex geometric patterns",
+        "Fast turnaround time"
+      ]
     },
     {
-      icon: Cog,
-      title: "Decorative Metal Panels",
-      description: "Architectural laser-cut screens and partitions with intricate geometric patterns for modern interiors.",
-      capabilities: ["Islamic geometric patterns", "Custom partition designs", "Various metal options", "Indoor & outdoor use"],
+      icon: Layers,
+      title: "Wooden Engraving",
+      description: "Detailed engraving on wood, plywood and multiwood for branding and personalization",
+      capabilities: [
+        "Logo engraving on wood",
+        "Calligraphy artwork",
+        "Decorative patterns",
+        "Text personalization"
+      ]
     },
     {
-      icon: Scissors,
-      title: "Custom Name Plates",
-      description: "Personalized metal nameplates with premium finishes. Perfect for homes, offices, and special occasions.",
-      capabilities: ["Brass inlay on wood", "Acrylic combinations", "Custom fonts & designs", "Small to large sizes"],
+      icon: Ruler,
+      title: "Interior Jaali Works",
+      description: "Traditional and modern jaali designs for partitions, screens and decorative elements",
+      capabilities: [
+        "Room partition panels",
+        "Geometric patterns",
+        "Islamic designs",
+        "Custom jaali screens"
+      ]
+    },
+    {
+      icon: Package,
+      title: "Custom Design & Engraving",
+      description: "Personalized designs for signage, awards, nameplates and decorative pieces",
+      capabilities: [
+        "Custom wooden nameplates",
+        "Trophies and mementos",
+        "Interior jaali panels",
+        "Personalized wooden gifts"
+      ]
     },
     {
       icon: Settings,
       title: "Architectural Elements",
-      description: "Designer furniture pieces and architectural elements including shelves, brackets, and decorative items.",
-      capabilities: ["Wall-mounted shelves", "Custom brackets", "Signage solutions", "Furniture accents"],
+      description: "Custom wooden doors, panels and architectural components for homes and offices",
+      capabilities: [
+        "Luxury wooden doors",
+        "Wall panels & screens",
+        "Designer shelving units",
+        "Custom furniture pieces"
+      ]
     },
+    {
+      icon: FileText,
+      title: "Islamic Calligraphy Art",
+      description: "Exquisite Islamic calligraphy pieces including Ayatul Kursi, Asmaul Husna, and custom designs",
+      capabilities: [
+        "Ayatul Kursi artwork",
+        "99 Names of Allah",
+        "Bismillah calligraphy",
+        "Custom Islamic art"
+      ]
+    }
   ];
 
   return (
@@ -44,7 +86,7 @@ const Services = () => {
             Precision Services
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From intricate Islamic art to modern architectural elements, we bring your vision to life with precision
+            Specializing in wood, plywood, multiwood, and acrylic cutting - from intricate Islamic art to modern architectural elements
           </p>
         </div>
 

@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Clock, Phone, Mail, Car } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Navigation as NavigationIcon } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -17,75 +17,116 @@ const Location = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Map Placeholder */}
-          <Card className="overflow-hidden border-border">
-            <div className="relative h-[400px] bg-muted flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-accent mx-auto mb-4" />
-                <p className="text-muted-foreground">Interactive map will be integrated here</p>
-                <p className="text-sm text-muted-foreground mt-2">123 Industrial Avenue, Manufacturing District</p>
-              </div>
+          {/* Google Maps */}
+          <div className="lg:col-span-1">
+            <div className="rounded-lg overflow-hidden shadow-lg h-full min-h-[400px]">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.4927!2d76.2278!3d10.9889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDU5JzIwLjAiTiA3NsKwMTMnNDAuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: "400px" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="ROUTERS CNC Laser Location"
+                className="w-full h-full"
+              />
             </div>
-          </Card>
+          </div>
 
           {/* Contact Information */}
           <div className="space-y-6">
-            <Card className="border-border">
+            <Card className="border-border hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-accent mt-1" />
                   <div>
                     <h3 className="font-semibold mb-2">Address</h3>
-                    <p className="text-muted-foreground">
-                      123 Industrial Avenue<br />
-                      Manufacturing District<br />
-                      Your City, ST 12345
+                    <p className="text-muted-foreground text-sm">
+                      Under Railway Over Bridge<br />
+                      Angadippuram, Perinthalmanna<br />
+                      Malappuram, Kerala, India<br />
+                      PIN: 679321
                     </p>
+                    <a 
+                      href="https://maps.google.com/?q=Angadippuram+Perinthalmanna+Malappuram+Kerala" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:underline mt-3 text-sm font-medium"
+                    >
+                      Get Directions →
+                    </a>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border">
+            <Card className="border-border hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
                   <Clock className="w-6 h-6 text-accent mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-2">Operating Hours</h3>
-                    <div className="space-y-1 text-muted-foreground">
-                      <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
-                      <p>Saturday: 8:00 AM - 2:00 PM</p>
-                      <p>Sunday: Closed</p>
+                    <h3 className="font-semibold mb-2">Working Hours</h3>
+                    <div className="text-muted-foreground space-y-1 text-sm">
+                      <p className="font-medium text-foreground">Monday - Saturday</p>
+                      <p>9:00 AM - 7:00 PM</p>
+                      <p className="font-medium text-foreground mt-3">Sunday</p>
+                      <p>Closed</p>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border">
+            <Card className="border-border hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-accent mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-2">Contact</h3>
-                    <div className="space-y-2 text-muted-foreground">
-                      <p>Phone: (123) 456-7890</p>
-                      <p>Email: info@cncpro.com</p>
+                    <h3 className="font-semibold mb-2">Phone</h3>
+                    <div className="text-muted-foreground space-y-1 text-sm">
+                      <p><a href="tel:+917012530677" className="hover:text-primary transition-colors">+91 70125 30677</a></p>
+                      <p><a href="tel:+919497379175" className="hover:text-primary transition-colors">+91 94973 79175</a></p>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border">
+            <Card className="border-border hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
-                  <Car className="w-6 h-6 text-accent mt-1" />
+                  <Mail className="w-6 h-6 text-accent mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-2">Parking</h3>
-                    <p className="text-muted-foreground">
-                      Free customer parking available in front of the building. Loading dock access for large deliveries.
+                    <h3 className="font-semibold mb-2">Email</h3>
+                    <p className="text-muted-foreground text-sm">
+                      <a href="mailto:routersjaalicutting@gmail.com" className="hover:text-primary transition-colors break-all">
+                        routersjaalicutting@gmail.com
+                      </a>
                     </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <div className="flex items-start gap-4">
+                  <NavigationIcon className="w-6 h-6 text-accent mt-1" />
+                  <div>
+                    <h3 className="font-semibold mb-2">Connect With Us</h3>
+                    <div className="text-muted-foreground space-y-2 text-sm">
+                      <p>
+                        <a href="https://instagram.com/routers__cnc" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                          📷 Instagram: @routers__cnc
+                        </a>
+                      </p>
+                      <p>
+                        <a href="https://wa.me/919048599981" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                          💬 WhatsApp: +91 90485 99981
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
