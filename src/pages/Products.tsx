@@ -187,10 +187,16 @@ const Products = () => {
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-8">Featured Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.filter(p => p.featured).map((product, index) => (
+            {products.filter(p => p.featured).map((product, index) => {
+              const featuredColors = [
+                'bg-gradient-to-br from-emerald-100 to-teal-100',
+                'bg-gradient-to-br from-green-100 to-emerald-100',
+                'bg-gradient-to-br from-teal-100 to-cyan-100'
+              ];
+              return (
               <Card 
                 key={index} 
-                className="overflow-hidden border-border hover:shadow-2xl transition-all duration-500 group cursor-pointer bg-gradient-to-b from-card to-muted/30"
+                className={`overflow-hidden border-2 border-primary/20 hover:shadow-2xl transition-all duration-500 group cursor-pointer ${featuredColors[index]}`}
                 onClick={() => setSelectedProduct(product)}
               >
                 <div className="relative h-80 overflow-hidden">
@@ -201,7 +207,7 @@ const Products = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                   <div className="absolute top-4 right-4">
-                    <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                    <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
                       Featured
                     </span>
                   </div>
@@ -213,7 +219,7 @@ const Products = () => {
                   <div className="text-xs text-primary font-medium">Materials: {product.materials}</div>
                 </div>
               </Card>
-            ))}
+            )})}
           </div>
         </div>
 
@@ -221,10 +227,22 @@ const Products = () => {
         <div>
           <h2 className="text-3xl font-bold mb-8">More Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {products.filter(p => !p.featured).map((product, index) => (
+            {products.filter(p => !p.featured).map((product, index) => {
+              const colors = [
+                'bg-gradient-to-br from-emerald-50 to-teal-50',
+                'bg-gradient-to-br from-green-50 to-emerald-50',
+                'bg-gradient-to-br from-teal-50 to-cyan-50',
+                'bg-gradient-to-br from-lime-50 to-green-50',
+                'bg-gradient-to-br from-emerald-50 to-green-50',
+                'bg-gradient-to-br from-teal-50 to-emerald-50',
+                'bg-gradient-to-br from-cyan-50 to-teal-50',
+                'bg-gradient-to-br from-green-50 to-teal-50',
+                'bg-gradient-to-br from-lime-50 to-emerald-50'
+              ];
+              return (
               <Card 
                 key={index} 
-                className="overflow-hidden border-border hover:shadow-xl transition-all duration-500 group cursor-pointer"
+                className={`overflow-hidden border-2 border-primary/20 hover:shadow-xl transition-all duration-500 group cursor-pointer ${colors[index % colors.length]}`}
                 onClick={() => setSelectedProduct(product)}
               >
                 <div className="relative h-56 overflow-hidden">
@@ -242,7 +260,7 @@ const Products = () => {
                   <div className="text-xs text-primary font-medium">Materials: {product.materials}</div>
                 </div>
               </Card>
-            ))}
+            )})}
           </div>
         </div>
 

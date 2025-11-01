@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import heroCNC from "@/assets/hero-cnc-blue.jpg";
+import heroCNC from "@/assets/hero-cnc-clean.jpg";
 import geometricPanel from "@/assets/products/geometric-panel.jpg";
 import illuminatedCabinet from "@/assets/products/illuminated-cabinet.jpg";
 import carvedPanels from "@/assets/products/carved-wall-panels.jpg";
@@ -181,12 +181,23 @@ const Home = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {featuredProducts.map((product, index) => (
+            {featuredProducts.map((product, index) => {
+              const colors = [
+                'bg-gradient-to-br from-emerald-50 to-teal-50',
+                'bg-gradient-to-br from-green-50 to-emerald-50',
+                'bg-gradient-to-br from-teal-50 to-cyan-50',
+                'bg-gradient-to-br from-lime-50 to-green-50',
+                'bg-gradient-to-br from-emerald-50 to-green-50',
+                'bg-gradient-to-br from-teal-50 to-emerald-50',
+                'bg-gradient-to-br from-cyan-50 to-teal-50',
+                'bg-gradient-to-br from-green-50 to-teal-50'
+              ];
+              return (
               <Card 
                 key={index} 
-                className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/50 bg-card cursor-pointer"
+                className={`group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/50 cursor-pointer ${colors[index % colors.length]}`}
               >
-                <div className="relative aspect-square overflow-hidden bg-muted">
+                <div className="relative aspect-square overflow-hidden">
                   <img 
                     src={product.image} 
                     alt={product.title}
@@ -203,7 +214,7 @@ const Home = () => {
                   </p>
                 </CardContent>
               </Card>
-            ))}
+            )})}
           </div>
 
           <div className="text-center">
