@@ -1,129 +1,159 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import islamicCalligraphy from "@/assets/products/islamic-calligraphy.jpg";
-import decorativePanel from "@/assets/products/decorative-panel.jpg";
+import geometricPanel from "@/assets/products/geometric-panel.jpg";
+import illuminatedCabinet from "@/assets/products/illuminated-cabinet.jpg";
+import carvedPanels from "@/assets/products/carved-wall-panels.jpg";
+import poojaDoor from "@/assets/products/pooja-door.jpg";
+import islamicClock from "@/assets/products/islamic-clock.jpg";
+import jaaliScreen from "@/assets/products/jaali-screen-large.jpg";
+import whiteDivider from "@/assets/products/white-divider.jpg";
+import carvedCabinet from "@/assets/products/carved-cabinet.jpg";
 import ayatulKursi from "@/assets/products/ayatul-kursi.jpg";
-import customNameplate from "@/assets/products/custom-nameplate.jpg";
-import wallShelf from "@/assets/products/wall-shelf.jpg";
 import asmaulHusna from "@/assets/products/asmaul-husna.jpg";
-import jaaliPanel from "@/assets/products/jaali-panel.jpg";
-import sportsTrophies from "@/assets/products/sports-trophies.jpg";
-import bismillahCalligraphy from "@/assets/products/bismillah-calligraphy.jpg";
-import luxuryDoor from "@/assets/products/luxury-door.jpg";
-import customNameplateDarul from "@/assets/products/custom-nameplate-darul.jpg";
-import nameplateMeghmalhar from "@/assets/products/nameplate-meghmalhar.jpg";
 import bismillahGold from "@/assets/products/bismillah-gold.jpg";
+import jaaliPanel from "@/assets/products/jaali-panel.jpg";
+import customNameplate from "@/assets/products/custom-nameplate-darul.jpg";
+import luxuryDoor from "@/assets/products/luxury-door.jpg";
+import sportsTrophies from "@/assets/products/sports-trophies.jpg";
+import wallShelf from "@/assets/products/wall-shelf.jpg";
 
 const Products = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
 
   const products = [
     {
-      title: "Islamic Jaali Partition Panel",
-      category: "Interior Jaali",
-      description: "Exquisite geometric pattern partition panel for elegant interior spaces",
-      image: jaaliPanel,
+      title: "Geometric Jaali Panel",
+      category: "Decorative Panels",
+      description: "Intricate laser-cut geometric patterns perfect for modern interiors and partitions. Features complex Greek key and floral motifs in high-quality wood.",
+      image: geometricPanel,
       featured: true,
+      materials: "Premium Wood, MDF"
+    },
+    {
+      title: "Illuminated Cabinet",
+      category: "Furniture",
+      description: "Beautiful backlit Islamic pattern cabinet with integrated LED lighting. Perfect for showcasing decorative items with ambient illumination.",
+      image: illuminatedCabinet,
+      featured: true,
+      materials: "Wood, Acrylic, LED"
+    },
+    {
+      title: "Carved Wall Panels Set",
+      category: "Wall Art",
+      description: "Set of three ornate wooden wall art panels featuring traditional carved designs with intricate floral and geometric patterns.",
+      image: carvedPanels,
+      featured: true,
+      materials: "Premium Wood"
+    },
+    {
+      title: "Pooja Room Glass Door",
+      category: "Architectural",
+      description: "Custom etched glass door with Hindu religious symbols including Ganesha, swastik, bells, and mandala patterns. Framed in rich wood.",
+      image: poojaDoor,
+      featured: false,
+      materials: "Etched Glass, Wood Frame"
+    },
+    {
+      title: "Islamic Crescent Wall Clock",
+      category: "Home Décor",
+      description: "Crescent moon design wall clock featuring mosque silhouette with intricate jaali pattern details. Functional art piece.",
+      image: islamicClock,
+      featured: false,
+      materials: "Wood, Clock Mechanism"
+    },
+    {
+      title: "Large Jaali Screen Panels",
+      category: "Room Dividers",
+      description: "Premium cream-colored jaali panels in traditional Islamic geometric patterns. Ideal for creating elegant space divisions or decorative backdrops.",
+      image: jaaliScreen,
+      featured: false,
+      materials: "Premium MDF, Wood"
+    },
+    {
+      title: "White Decorative Divider",
+      category: "Partitions",
+      description: "Elegant white standing room divider panels with flowing floral and geometric laser-cut patterns. Freestanding design.",
+      image: whiteDivider,
+      featured: false,
+      materials: "MDF, Paint Finish"
+    },
+    {
+      title: "Luxury Carved Cabinet",
+      category: "Furniture",
+      description: "Ornate wooden cabinet with exquisite hand-carved floral patterns on three panel doors. Museum-quality craftsmanship.",
+      image: carvedCabinet,
+      featured: false,
+      materials: "Premium Hardwood"
+    },
+    {
+      title: "Ayatul Kursi Calligraphy",
+      category: "Islamic Art",
+      description: "Exquisite Ayatul Kursi wall art with intricate Arabic calligraphy and gold accents on premium wood backdrop.",
+      image: ayatulKursi,
+      featured: false,
+      materials: "Wood, Gold Acrylic"
+    },
+    {
+      title: "Asmaul Husna Collection",
+      category: "Islamic Wall Art",
+      description: "Complete 99 Names of Allah displayed in honeycomb hexagonal pattern. Contemporary design meets traditional calligraphy.",
+      image: asmaulHusna,
+      featured: false,
+      materials: "Acrylic, PVC"
+    },
+    {
+      title: "Bismillah Gold Edition",
+      category: "Islamic Décor",
+      description: "Stunning gold-finished Bismillah calligraphy wall art on dark premium wood. Perfect for modern Islamic interiors.",
+      image: bismillahGold,
+      featured: false,
+      materials: "Wood, Gold Acrylic Finish"
+    },
+    {
+      title: "Traditional Jaali Panel",
+      category: "Interior Décor",
+      description: "Classic Islamic geometric pattern jaali panel for windows, doors, or decorative wall elements.",
+      image: jaaliPanel,
+      featured: false,
       materials: "Wood, MDF, Plywood"
     },
     {
-      title: "Ayatul Kursi Wall Artwork",
-      category: "Islamic Calligraphy",
-      description: "Premium wooden Ayatul Kursi with gold acrylic inlay finish",
-      image: ayatulKursi,
-      featured: true,
-      materials: "Wood, Acrylic"
+      title: "Custom Wooden Nameplate",
+      category: "Personalized Signs",
+      description: "Handcrafted wooden nameplate 'Darul Hamd' with elegant brass inlay lettering and decorative border.",
+      image: customNameplate,
+      featured: false,
+      materials: "Wood, Brass Inlay"
     },
     {
-      title: "Asmaul Husna - 99 Names of Allah",
-      category: "Wall Calligraphy",
-      description: "Complete 99 Names displayed in honeycomb hexagonal pattern",
-      image: asmaulHusna,
-      featured: true,
-      materials: "PVC, Acrylic"
+      title: "Luxury Wooden Door",
+      category: "Architectural",
+      description: "Premium CNC-carved wooden door with intricate traditional patterns. Perfect for luxury homes and offices.",
+      image: luxuryDoor,
+      featured: false,
+      materials: "Premium Hardwood"
     },
     {
-      title: "Premium Sports Trophies",
-      category: "Custom Awards",
-      description: "Elegant laser-cut acrylic trophies for sports achievements",
+      title: "Sports Trophy Collection",
+      category: "Awards",
+      description: "Custom laser-engraved acrylic trophies and awards for sports achievements and special recognition.",
       image: sportsTrophies,
       featured: false,
       materials: "Acrylic, Wood Base"
     },
     {
-      title: "Bismillah Calligraphy Art",
-      category: "Islamic Wall Art",
-      description: "Beautiful Bismillah calligraphy with gold finish on premium wood",
-      image: bismillahCalligraphy,
-      featured: false,
-      materials: "Wood, Gold Acrylic"
-    },
-    {
-      title: "Luxury Carved Wooden Door",
-      category: "Architectural",
-      description: "Intricately carved luxury door with traditional craftsmanship",
-      image: luxuryDoor,
-      featured: false,
-      materials: "Premium Wood"
-    },
-    {
-      title: "Custom Wooden Nameplate - Darul Hamd",
-      category: "Personalized Signs",
-      description: "Handcrafted wooden nameplate with engraved brass lettering",
-      image: customNameplateDarul,
-      featured: false,
-      materials: "Wood, Brass Inlay"
-    },
-    {
-      title: "Elegant Name Sign - Meghmalhar",
-      category: "Custom Nameplates",
-      description: "Premium wooden nameplate with decorative brass inlay elements",
-      image: nameplateMeghmalhar,
-      featured: false,
-      materials: "Wood, Brass"
-    },
-    {
-      title: "Bismillah Golden Calligraphy",
-      category: "Islamic Decor",
-      description: "Stunning gold-finished Bismillah wall art on dark backdrop",
-      image: bismillahGold,
-      featured: false,
-      materials: "Wood, Gold Acrylic"
-    },
-    {
-      title: "Islamic Calligraphy Collection",
-      category: "Religious Art",
-      description: "Hand-finished Islamic calligraphy pieces with premium craftsmanship",
-      image: islamicCalligraphy,
-      featured: false,
-      materials: "Wood, Acrylic"
-    },
-    {
-      title: "Geometric Decorative Panels",
-      category: "Room Partitions",
-      description: "Modern Islamic geometric patterns for elegant space division",
-      image: decorativePanel,
-      featured: false,
-      materials: "MDF, Plywood, Multiwood"
-    },
-    {
-      title: "Custom Brass Nameplate",
-      category: "Personalized",
-      description: "Elegant brass inlay nameplates on premium wood finish",
-      image: customNameplate,
-      featured: false,
-      materials: "Wood, Brass"
-    },
-    {
-      title: "Designer Wall Shelves",
-      category: "Interior Furniture",
-      description: "Modern geometric shelving units with clean contemporary lines",
+      title: "Hexagonal Wall Shelf",
+      category: "Furniture",
+      description: "Modern geometric shelving unit combining white hexagonal compartments with wood accents. Functional art storage.",
       image: wallShelf,
       featured: false,
-      materials: "Wood, MDF"
+      materials: "Wood, MDF, Paint"
     },
   ];
 
@@ -132,6 +162,15 @@ const Products = () => {
       <Navigation />
       
       <main className="container mx-auto px-4 pt-32 pb-20">
+        <div className="mb-8">
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/" className="flex items-center gap-2">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Home
+            </Link>
+          </Button>
+        </div>
+
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="text-sm font-semibold text-accent uppercase tracking-wider">Our Gallery</span>
@@ -152,7 +191,7 @@ const Products = () => {
               <Card 
                 key={index} 
                 className="overflow-hidden border-border hover:shadow-2xl transition-all duration-500 group cursor-pointer bg-gradient-to-b from-card to-muted/30"
-                onClick={() => setSelectedImage(product.image)}
+                onClick={() => setSelectedProduct(product)}
               >
                 <div className="relative h-80 overflow-hidden">
                   <img
@@ -170,7 +209,7 @@ const Products = () => {
                 <div className="p-6">
                   <div className="text-sm text-accent font-semibold mb-2 uppercase tracking-wide">{product.category}</div>
                   <h3 className="text-xl font-bold mb-2 text-foreground">{product.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-3">{product.description}</p>
+                  <p className="text-muted-foreground text-sm mb-3 line-clamp-2">{product.description}</p>
                   <div className="text-xs text-primary font-medium">Materials: {product.materials}</div>
                 </div>
               </Card>
@@ -181,14 +220,14 @@ const Products = () => {
         {/* All Products */}
         <div>
           <h2 className="text-3xl font-bold mb-8">More Products</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {products.filter(p => !p.featured).map((product, index) => (
               <Card 
                 key={index} 
                 className="overflow-hidden border-border hover:shadow-xl transition-all duration-500 group cursor-pointer"
-                onClick={() => setSelectedImage(product.image)}
+                onClick={() => setSelectedProduct(product)}
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-56 overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.title}
@@ -196,10 +235,10 @@ const Products = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <div className="p-6">
-                  <div className="text-sm text-accent font-semibold mb-2 uppercase tracking-wide">{product.category}</div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">{product.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-3">{product.description}</p>
+                <div className="p-4">
+                  <div className="text-xs text-accent font-semibold mb-1 uppercase">{product.category}</div>
+                  <h3 className="text-base font-semibold mb-1 text-foreground line-clamp-1">{product.title}</h3>
+                  <p className="text-xs text-muted-foreground line-clamp-2 mb-2">{product.description}</p>
                   <div className="text-xs text-primary font-medium">Materials: {product.materials}</div>
                 </div>
               </Card>
@@ -216,28 +255,53 @@ const Products = () => {
                 Bring Your Design to Life
               </h2>
               <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                Custom orders welcome. Share your design and we will create it with precision and excellence
+                Custom orders welcome. Share your design and we'll create it with precision and excellence
               </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-white text-primary px-8 py-4 font-semibold hover:bg-white/90 transition-colors shadow-lg"
-              >
-                Request Custom Quote
-              </a>
+              <Button asChild size="lg" variant="secondary" className="shadow-xl">
+                <Link to="/contact">
+                  Request Custom Quote
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
       </main>
 
-      {/* Image Preview Dialog */}
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-4xl p-0">
-          {selectedImage && (
-            <img
-              src={selectedImage}
-              alt="Product preview"
-              className="w-full h-auto rounded-lg"
-            />
+      {/* Product Detail Dialog */}
+      <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-auto">
+          {selectedProduct && (
+            <div className="grid md:grid-cols-2 gap-8 p-6">
+              <div className="relative aspect-square overflow-hidden rounded-lg">
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="space-y-6">
+                <div>
+                  <div className="text-sm text-accent font-semibold mb-2 uppercase tracking-wider">
+                    {selectedProduct.category}
+                  </div>
+                  <h2 className="text-3xl font-bold mb-4">{selectedProduct.title}</h2>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    {selectedProduct.description}
+                  </p>
+                </div>
+                <div className="pt-4 border-t">
+                  <h3 className="font-semibold text-lg mb-2">Materials Used</h3>
+                  <p className="text-muted-foreground">{selectedProduct.materials}</p>
+                </div>
+                <div className="pt-4">
+                  <Button asChild size="lg" className="w-full">
+                    <Link to="/contact">
+                      Get Custom Quote
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
           )}
         </DialogContent>
       </Dialog>

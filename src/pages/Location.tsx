@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Clock, Phone, Mail, Navigation as NavigationIcon } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Navigation as NavigationIcon, ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -9,6 +11,15 @@ const Location = () => {
       <Navigation />
       
       <main className="container mx-auto px-4 pt-32 pb-20">
+        <div className="mb-8">
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/" className="flex items-center gap-2">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Home
+            </Link>
+          </Button>
+        </div>
+
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-4">Visit Our Shop</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

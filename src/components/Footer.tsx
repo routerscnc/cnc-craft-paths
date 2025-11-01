@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -10,9 +10,20 @@ const Footer = () => {
             <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
               ROUTERS
             </h3>
-            <p className="text-sm text-muted-foreground">
-              Premium CNC laser cutting for architectural and decorative metalwork.
+            <p className="text-sm text-muted-foreground mb-4">
+              Premium CNC laser cutting for wood, plywood & acrylic.
             </p>
+            <div className="flex gap-4">
+              <a href="https://www.instagram.com/routers_jali_cutting/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://www.facebook.com/routersjalicutting" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://wa.me/917012530677" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <MessageCircle className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           <div>
@@ -36,7 +47,12 @@ const Footer = () => {
               <div className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-1 flex-shrink-0" />
                 <div>
-                  <a href="tel:+917012530677" className="hover:text-primary transition-colors">+91 70125 30677</a>
+                  <a href="tel:+917012530677" className="hover:text-primary transition-colors flex items-center gap-2">
+                    +91 70125 30677
+                    <button className="text-xs bg-primary text-primary-foreground px-2 py-1 rounded hover:bg-primary/90 transition-colors">
+                      Call
+                    </button>
+                  </a>
                   <br />
                   <a href="tel:+919497379175" className="hover:text-primary transition-colors">+91 94973 79175</a>
                 </div>

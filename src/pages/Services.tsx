@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Package, Layers, Ruler, Settings, FileText, Zap } from "lucide-react";
+import { Package, Layers, Ruler, Settings, FileText, Zap, ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -78,6 +80,15 @@ const Services = () => {
       <Navigation />
       
       <main className="container mx-auto px-4 pt-32 pb-20">
+        <div className="mb-8">
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/" className="flex items-center gap-2">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Home
+            </Link>
+          </Button>
+        </div>
+
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="text-sm font-semibold text-accent uppercase tracking-wider">What We Offer</span>
