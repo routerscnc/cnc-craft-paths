@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Package, Award, Home as HomeIcon, Grid3x3 } from "lucide-react";
+import { ArrowLeft, Package, Award, Home as HomeIcon, Grid3x3, DoorOpen, Layers, PaintBucket, Signpost } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import geometricPanel from "@/assets/products/geometric-panel.jpg";
@@ -54,15 +54,18 @@ const Products = () => {
 
   const categories = [
     { name: "All", icon: Grid3x3 },
-    { name: "Doors", icon: HomeIcon },
+    { name: "Doors", icon: DoorOpen },
     { name: "Mementos", icon: Award },
-    { name: "Pooja Room", icon: Package },
+    { name: "Panels", icon: Layers },
+    { name: "Wall Decor", icon: PaintBucket },
+    { name: "Pooja & Mosques", icon: Package },
+    { name: "Signage", icon: Signpost },
   ];
 
   const products = [
     {
       title: "Islamic Metal Calligraphy",
-      category: "Pooja Room",
+      category: "Pooja & Mosques",
       description: "Stunning metallic Islamic calligraphy wall art with golden finish. Intricate laser-cut Arabic script perfect for prayer rooms and Islamic décor.",
       image: islamicMetalArt,
       featured: true,
@@ -70,7 +73,7 @@ const Products = () => {
     },
     {
       title: "Wooden Podium",
-      category: "Doors",
+      category: "Pooja & Mosques",
       description: "Elegant wooden podium with intricate jaali panel design. Perfect for mosques, prayer halls, and ceremonial spaces.",
       image: woodenPodium,
       featured: true,
@@ -86,7 +89,7 @@ const Products = () => {
     },
     {
       title: "Geometric Jaali Panel",
-      category: "Decorative Panels",
+      category: "Panels",
       description: "Intricate laser-cut geometric patterns perfect for modern interiors and partitions. Features complex Greek key and floral motifs in high-quality wood.",
       image: geometricPanel,
       featured: false,
@@ -94,7 +97,7 @@ const Products = () => {
     },
     {
       title: "Illuminated Cabinet",
-      category: "Furniture",
+      category: "Wall Decor",
       description: "Beautiful backlit Islamic pattern cabinet with integrated LED lighting. Perfect for showcasing decorative items with ambient illumination.",
       image: illuminatedCabinet,
       featured: true,
@@ -102,7 +105,7 @@ const Products = () => {
     },
     {
       title: "Carved Wall Panels Set",
-      category: "Wall Art",
+      category: "Wall Decor",
       description: "Set of three ornate wooden wall art panels featuring traditional carved designs with intricate floral and geometric patterns.",
       image: carvedPanels,
       featured: true,
@@ -110,7 +113,7 @@ const Products = () => {
     },
     {
       title: "Pooja Room Glass Door",
-      category: "Architectural",
+      category: "Doors",
       description: "Custom etched glass door with Hindu religious symbols including Ganesha, swastik, bells, and mandala patterns. Framed in rich wood.",
       image: poojaDoor,
       featured: false,
@@ -118,7 +121,7 @@ const Products = () => {
     },
     {
       title: "Islamic Crescent Wall Clock",
-      category: "Home Décor",
+      category: "Wall Decor",
       description: "Crescent moon design wall clock featuring mosque silhouette with intricate jaali pattern details. Functional art piece.",
       image: islamicClock,
       featured: false,
@@ -126,7 +129,7 @@ const Products = () => {
     },
     {
       title: "Large Jaali Screen Panels",
-      category: "Room Dividers",
+      category: "Panels",
       description: "Premium cream-colored jaali panels in traditional Islamic geometric patterns. Ideal for creating elegant space divisions or decorative backdrops.",
       image: jaaliScreen,
       featured: false,
@@ -134,7 +137,7 @@ const Products = () => {
     },
     {
       title: "White Decorative Divider",
-      category: "Partitions",
+      category: "Panels",
       description: "Elegant white standing room divider panels with flowing floral and geometric laser-cut patterns. Freestanding design.",
       image: whiteDivider,
       featured: false,
@@ -142,7 +145,7 @@ const Products = () => {
     },
     {
       title: "Luxury Carved Cabinet",
-      category: "Furniture",
+      category: "Wall Decor",
       description: "Ornate wooden cabinet with exquisite hand-carved floral patterns on three panel doors. Museum-quality craftsmanship.",
       image: carvedCabinet,
       featured: false,
@@ -150,7 +153,7 @@ const Products = () => {
     },
     {
       title: "Ayatul Kursi Calligraphy",
-      category: "Islamic Art",
+      category: "Pooja & Mosques",
       description: "Exquisite Ayatul Kursi wall art with intricate Arabic calligraphy and gold accents on premium wood backdrop.",
       image: ayatulKursi,
       featured: false,
@@ -158,7 +161,7 @@ const Products = () => {
     },
     {
       title: "Asmaul Husna Collection",
-      category: "Islamic Wall Art",
+      category: "Pooja & Mosques",
       description: "Complete 99 Names of Allah displayed in honeycomb hexagonal pattern. Contemporary design meets traditional calligraphy.",
       image: asmaulHusna,
       featured: false,
@@ -166,7 +169,7 @@ const Products = () => {
     },
     {
       title: "Bismillah Gold Edition",
-      category: "Islamic Décor",
+      category: "Pooja & Mosques",
       description: "Stunning gold-finished Bismillah calligraphy wall art on dark premium wood. Perfect for modern Islamic interiors.",
       image: bismillahGold,
       featured: false,
@@ -174,7 +177,7 @@ const Products = () => {
     },
     {
       title: "Traditional Jaali Panel",
-      category: "Interior Décor",
+      category: "Panels",
       description: "Classic Islamic geometric pattern jaali panel for windows, doors, or decorative wall elements.",
       image: jaaliPanel,
       featured: false,
@@ -182,7 +185,7 @@ const Products = () => {
     },
     {
       title: "Custom Wooden Nameplate",
-      category: "Personalized Signs",
+      category: "Signage",
       description: "Handcrafted wooden nameplate 'Darul Hamd' with elegant brass inlay lettering and decorative border.",
       image: customNameplate,
       featured: false,
@@ -190,7 +193,7 @@ const Products = () => {
     },
     {
       title: "Luxury Wooden Door",
-      category: "Architectural",
+      category: "Doors",
       description: "Premium CNC-carved wooden door with intricate traditional patterns. Perfect for luxury homes and offices.",
       image: luxuryDoor,
       featured: false,
@@ -206,7 +209,7 @@ const Products = () => {
     },
     {
       title: "Hexagonal Wall Shelf",
-      category: "Furniture",
+      category: "Wall Decor",
       description: "Modern geometric shelving unit combining white hexagonal compartments with wood accents. Functional art storage.",
       image: wallShelf,
       featured: false,
@@ -238,7 +241,7 @@ const Products = () => {
     },
     {
       title: "Complete Mosque Interior",
-      category: "Pooja Room",
+      category: "Pooja & Mosques",
       description: "Stunning full mosque interior featuring intricate jaali wall panels, custom wooden podium with jaali patterns, and traditional arched entrance. Complete Islamic architectural design.",
       image: mosqueInterior,
       featured: false,
@@ -246,7 +249,7 @@ const Products = () => {
     },
     {
       title: "Islamic Calligraphy Glass Frame",
-      category: "Pooja Room",
+      category: "Pooja & Mosques",
       description: "Elegant Islamic calligraphy art piece in premium glass frame with wooden stand. Perfect for Islamic prayer rooms and home décor.",
       image: islamicGlassFrame,
       featured: false,
@@ -262,7 +265,7 @@ const Products = () => {
     },
     {
       title: "Mosque Podium with Jaali",
-      category: "Pooja Room",
+      category: "Pooja & Mosques",
       description: "Custom wooden podium featuring Islamic jaali geometric patterns and pointed arch design. Perfect for mosques and prayer halls.",
       image: mosquePodiumJaali,
       featured: false,
@@ -294,7 +297,7 @@ const Products = () => {
     },
     {
       title: "Om Symbol Triangle Décor",
-      category: "Pooja Room",
+      category: "Pooja & Mosques",
       description: "Beautiful triangular wall art featuring Om symbol with intricate decorative borders. Perfect for Hindu prayer rooms and meditation spaces.",
       image: omTriangleDecor,
       featured: false,
@@ -326,7 +329,7 @@ const Products = () => {
     },
     {
       title: "Islamic Calligraphy Wall Art",
-      category: "Pooja Room",
+      category: "Pooja & Mosques",
       description: "Stunning metallic Islamic calligraphy with gold finish on dark background. Large decorative piece perfect for mosques and prayer rooms.",
       image: islamicCalligraphyGold,
       featured: false,
@@ -374,7 +377,7 @@ const Products = () => {
     },
     {
       title: "Bismillah Large Panel",
-      category: "Pooja Room",
+      category: "Pooja & Mosques",
       description: "Large CNC-carved wooden panel featuring complete Bismillah calligraphy with decorative border. Premium Islamic wall art.",
       image: bismillahPanelLarge,
       featured: false,
