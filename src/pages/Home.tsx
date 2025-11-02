@@ -2,9 +2,16 @@ import { Link } from "react-router-dom";
 import { Check, Zap, Shield, Award, ArrowRight, Home as HomeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroCNC from "@/assets/hero-cnc-clean.jpg";
+import heroCNC2 from "@/assets/hero-cnc.jpg";
+import heroCNC3 from "@/assets/hero-cnc-blue.jpg";
 import geometricPanel from "@/assets/products/geometric-panel.jpg";
 import illuminatedCabinet from "@/assets/products/illuminated-cabinet.jpg";
 import carvedPanels from "@/assets/products/carved-wall-panels.jpg";
@@ -13,8 +20,32 @@ import islamicClock from "@/assets/products/islamic-clock.jpg";
 import jaaliScreen from "@/assets/products/jaali-screen-large.jpg";
 import whiteDivider from "@/assets/products/white-divider.jpg";
 import carvedCabinet from "@/assets/products/carved-cabinet.jpg";
+import Autoplay from "embla-carousel-autoplay";
+import { useState, useEffect } from "react";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 const Home = () => {
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  const heroImages = [
+    heroCNC,
+    heroCNC2,
+    heroCNC3,
+  ];
+
+  useEffect(() => {
+    if (!carouselApi) {
+      return;
+    }
+
+    setCurrent(carouselApi.selectedScrollSnap());
+
+    carouselApi.on("select", () => {
+      setCurrent(carouselApi.selectedScrollSnap());
+    });
+  }, [carouselApi]);
+
   const features = [
     {
       icon: Zap,
@@ -80,17 +111,39 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section 
-        className="relative min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url(${heroCNC})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-background opacity-60" />
-        
+      {/* Hero Section with Carousel */}
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden">
+        <Carousel
+          setApi={setCarouselApi}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 4000,
+            }),
+          ]}
+          className="w-full h-full absolute inset-0"
+        >
+          <CarouselContent className="h-full">
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index} className="h-full">
+                <div
+                  className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url(${image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-background opacity-60" />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
             <div className="inline-block">
@@ -128,6 +181,22 @@ const Home = () => {
               </Button>
             </div>
           </div>
+        </div>
+
+        {/* Dot Indicators */}
+        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => carouselApi?.scrollTo(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                current === index
+                  ? "bg-white w-8"
+                  : "bg-white/50 hover:bg-white/70"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
