@@ -28,6 +28,16 @@ import decorativeBoxArabic from "@/assets/products/decorative-box-arabic.jpg";
 import mementosCollection from "@/assets/products/mementos-collection.jpg";
 import woodenPodium from "@/assets/products/wooden-podium.jpg";
 import studentMementos from "@/assets/products/student-mementos.jpg";
+import mosqueInterior from "@/assets/products/mosque-interior.jpg";
+import islamicGlassFrame from "@/assets/products/islamic-glass-frame.jpg";
+import radialDoorPanel from "@/assets/products/radial-door-panel.jpg";
+import radialDoorFull from "@/assets/products/radial-door-full.jpg";
+import mosquePodiumJaali from "@/assets/products/mosque-podium-jaali.jpg";
+import customSignRed from "@/assets/products/custom-sign-red.jpg";
+import basketweaveDoor from "@/assets/products/basketweave-door.jpg";
+import cityDriveSign from "@/assets/products/city-drive-sign.jpg";
+import arabicWhiteNameplate from "@/assets/products/arabic-white-nameplate.jpg";
+import omTriangleDecor from "@/assets/products/om-triangle-decor.jpg";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
@@ -216,6 +226,78 @@ const Products = () => {
       image: studentMementos,
       featured: false,
       materials: "Acrylic, UV Print"
+    },
+    {
+      title: "Complete Mosque Interior",
+      category: "Pooja Room",
+      description: "Stunning full mosque interior featuring intricate jaali wall panels, custom wooden podium with jaali patterns, and traditional arched entrance. Complete Islamic architectural design.",
+      image: mosqueInterior,
+      featured: false,
+      materials: "Premium Wood, Jaali Panels"
+    },
+    {
+      title: "Islamic Calligraphy Glass Frame",
+      category: "Pooja Room",
+      description: "Elegant Islamic calligraphy art piece in premium glass frame with wooden stand. Perfect for Islamic prayer rooms and home décor.",
+      image: islamicGlassFrame,
+      featured: false,
+      materials: "Glass, Wood Frame, Engraving"
+    },
+    {
+      title: "Radial Sunburst Door Panel",
+      category: "Doors",
+      description: "Intricate CNC-carved wooden door with stunning radiating sunburst pattern. Precision laser-cut concentric circles create a mesmerizing 3D effect.",
+      image: radialDoorFull,
+      featured: false,
+      materials: "Premium Hardwood, CNC Carving"
+    },
+    {
+      title: "Mosque Podium with Jaali",
+      category: "Pooja Room",
+      description: "Custom wooden podium featuring Islamic jaali geometric patterns and pointed arch design. Perfect for mosques and prayer halls.",
+      image: mosquePodiumJaali,
+      featured: false,
+      materials: "Hardwood, Jaali Work"
+    },
+    {
+      title: "Basket Weave Pattern Door",
+      category: "Doors",
+      description: "Elegant wooden door featuring intricate basket weave laser-cut pattern strips. Contemporary design meets traditional craftsmanship.",
+      image: basketweaveDoor,
+      featured: false,
+      materials: "Premium Wood, Laser Cutting"
+    },
+    {
+      title: "City Drive Custom Sign",
+      category: "Signage",
+      description: "Large custom wooden signage for 'City Drive Pre Loved Cars' with decorative border. Professional CNC-engraved lettering.",
+      image: cityDriveSign,
+      featured: false,
+      materials: "Wood, CNC Engraving"
+    },
+    {
+      title: "Arabic Calligraphy Nameplate",
+      category: "Signage",
+      description: "Elegant white nameplate with Arabic calligraphy and decorative borders. Wood backing provides beautiful depth and contrast.",
+      image: arabicWhiteNameplate,
+      featured: false,
+      materials: "Wood, White Finish, Laser Cut"
+    },
+    {
+      title: "Om Symbol Triangle Décor",
+      category: "Pooja Room",
+      description: "Beautiful triangular wall art featuring Om symbol with intricate decorative borders. Perfect for Hindu prayer rooms and meditation spaces.",
+      image: omTriangleDecor,
+      featured: false,
+      materials: "Wood, Laser Cut, White Inlay"
+    },
+    {
+      title: "Custom Red Acrylic Sign",
+      category: "Signage",
+      description: "Custom-shaped acrylic signage with white lettering. Durable outdoor/indoor signage solution with vibrant colors.",
+      image: customSignRed,
+      featured: false,
+      materials: "Acrylic, Vinyl Letters"
     },
   ];
 
