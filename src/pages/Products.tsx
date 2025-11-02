@@ -38,6 +38,15 @@ import basketweaveDoor from "@/assets/products/basketweave-door.jpg";
 import cityDriveSign from "@/assets/products/city-drive-sign.jpg";
 import arabicWhiteNameplate from "@/assets/products/arabic-white-nameplate.jpg";
 import omTriangleDecor from "@/assets/products/om-triangle-decor.jpg";
+import varshamSign from "@/assets/products/varsham-sign.jpg";
+import weddingMementoGold from "@/assets/products/wedding-memento-gold.jpg";
+import islamicCalligraphyGold from "@/assets/products/islamic-calligraphy-gold.jpg";
+import deskNameplate from "@/assets/products/desk-nameplate.jpg";
+import arabicColorfulMementos from "@/assets/products/arabic-colorful-mementos.jpg";
+import roundNameplate from "@/assets/products/round-nameplate.jpg";
+import businessCardHolders from "@/assets/products/business-card-holders.jpg";
+import portraitMemento from "@/assets/products/portrait-memento.jpg";
+import bismillahPanelLarge from "@/assets/products/bismillah-panel-large.jpg";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
@@ -298,6 +307,78 @@ const Products = () => {
       image: customSignRed,
       featured: false,
       materials: "Acrylic, Vinyl Letters"
+    },
+    {
+      title: "Varsham Metal Sign",
+      category: "Signage",
+      description: "Elegant cursive metal sign with 'Varsham' lettering. Perfect for home décor, garden displays, and personalized signage.",
+      image: varshamSign,
+      featured: false,
+      materials: "Metal, Powder Coating"
+    },
+    {
+      title: "Wedding Memento Gold Frame",
+      category: "Mementos",
+      description: "Premium acrylic wedding memento with gold accents, custom photo printing, and wooden base. Perfect for celebrating special occasions.",
+      image: weddingMementoGold,
+      featured: false,
+      materials: "Acrylic, Gold Print, Wood Base"
+    },
+    {
+      title: "Islamic Calligraphy Wall Art",
+      category: "Pooja Room",
+      description: "Stunning metallic Islamic calligraphy with gold finish on dark background. Large decorative piece perfect for mosques and prayer rooms.",
+      image: islamicCalligraphyGold,
+      featured: false,
+      materials: "Metal, Gold Finish, Acrylic"
+    },
+    {
+      title: "Desk Nameplate",
+      category: "Signage",
+      description: "Professional acrylic desk nameplate with logo and title. Perfect for office desks and corporate branding.",
+      image: deskNameplate,
+      featured: false,
+      materials: "Acrylic, Wood Base, Vinyl Print"
+    },
+    {
+      title: "Arabic Calligraphy Mementos",
+      category: "Mementos",
+      description: "Vibrant Arabic calligraphy awards with colorful design and photo integration. Perfect for student achievements and recognition.",
+      image: arabicColorfulMementos,
+      featured: false,
+      materials: "Acrylic, UV Print, Wood Base"
+    },
+    {
+      title: "Round Wooden Nameplate",
+      category: "Signage",
+      description: "Circular wooden nameplate with white engraved lettering and decorative leaf borders. Elegant personalized home signage.",
+      image: roundNameplate,
+      featured: false,
+      materials: "Premium Wood, White Inlay"
+    },
+    {
+      title: "Business Card Holders",
+      category: "Signage",
+      description: "Professional wooden business card holders with logo engraving. Perfect for corporate gifts and office desk accessories.",
+      image: businessCardHolders,
+      featured: false,
+      materials: "Premium Wood, Laser Engraving"
+    },
+    {
+      title: "Portrait Memento",
+      category: "Mementos",
+      description: "Custom wooden memento with portrait engraving and gold acrylic frame. Perfect for recognition awards and special honors.",
+      image: portraitMemento,
+      featured: false,
+      materials: "Wood, Gold Acrylic, Engraving"
+    },
+    {
+      title: "Bismillah Large Panel",
+      category: "Pooja Room",
+      description: "Large CNC-carved wooden panel featuring complete Bismillah calligraphy with decorative border. Premium Islamic wall art.",
+      image: bismillahPanelLarge,
+      featured: false,
+      materials: "Premium Wood, CNC Carving"
     },
   ];
 
