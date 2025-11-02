@@ -132,12 +132,12 @@ const Home = () => {
                 <div
                   className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url(${image})`,
+                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.3), rgba(30, 41, 59, 0.3)), url(${image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-background opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-background opacity-20" />
                 </div>
               </CarouselItem>
             ))}
