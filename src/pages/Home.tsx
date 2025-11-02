@@ -169,12 +169,12 @@ const Home = () => {
                   Get Quote <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
+              <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/products">
                   View Products
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
+              <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/services">
                   Our Services
                 </Link>
@@ -183,8 +183,8 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Dot Indicators */}
-        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+        {/* Dot Indicators - Moved Down */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
           {heroImages.map((_, index) => (
             <button
               key={index}
@@ -197,10 +197,6 @@ const Home = () => {
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
-        </div>
-
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowRight className="w-6 h-6 text-white rotate-90" />
         </div>
       </section>
 

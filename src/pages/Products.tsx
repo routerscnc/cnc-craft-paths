@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Package, Award, Home as HomeIcon, Grid3x3 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import geometricPanel from "@/assets/products/geometric-panel.jpg";
@@ -22,17 +22,55 @@ import customNameplate from "@/assets/products/custom-nameplate-darul.jpg";
 import luxuryDoor from "@/assets/products/luxury-door.jpg";
 import sportsTrophies from "@/assets/products/sports-trophies.jpg";
 import wallShelf from "@/assets/products/wall-shelf.jpg";
+import awardPlaque from "@/assets/products/award-plaque.jpg";
+import islamicMetalArt from "@/assets/products/islamic-metal-art.jpg";
+import decorativeBoxArabic from "@/assets/products/decorative-box-arabic.jpg";
+import mementosCollection from "@/assets/products/mementos-collection.jpg";
+import woodenPodium from "@/assets/products/wooden-podium.jpg";
+import studentMementos from "@/assets/products/student-mementos.jpg";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+
+  const categories = [
+    { name: "All", icon: Grid3x3 },
+    { name: "Doors", icon: HomeIcon },
+    { name: "Mementos", icon: Award },
+    { name: "Pooja Room", icon: Package },
+  ];
 
   const products = [
+    {
+      title: "Islamic Metal Calligraphy",
+      category: "Pooja Room",
+      description: "Stunning metallic Islamic calligraphy wall art with golden finish. Intricate laser-cut Arabic script perfect for prayer rooms and Islamic décor.",
+      image: islamicMetalArt,
+      featured: true,
+      materials: "Metal, Gold Finish"
+    },
+    {
+      title: "Wooden Podium",
+      category: "Doors",
+      description: "Elegant wooden podium with intricate jaali panel design. Perfect for mosques, prayer halls, and ceremonial spaces.",
+      image: woodenPodium,
+      featured: true,
+      materials: "Premium Hardwood"
+    },
+    {
+      title: "Award Plaque Collection",
+      category: "Mementos",
+      description: "Custom laser-engraved wooden award plaques with Arabic text and logo branding. Perfect for recognition ceremonies and special achievements.",
+      image: awardPlaque,
+      featured: true,
+      materials: "Premium Wood, Laser Engraving"
+    },
     {
       title: "Geometric Jaali Panel",
       category: "Decorative Panels",
       description: "Intricate laser-cut geometric patterns perfect for modern interiors and partitions. Features complex Greek key and floral motifs in high-quality wood.",
       image: geometricPanel,
-      featured: true,
+      featured: false,
       materials: "Premium Wood, MDF"
     },
     {
@@ -141,7 +179,7 @@ const Products = () => {
     },
     {
       title: "Sports Trophy Collection",
-      category: "Awards",
+      category: "Mementos",
       description: "Custom laser-engraved acrylic trophies and awards for sports achievements and special recognition.",
       image: sportsTrophies,
       featured: false,
@@ -155,7 +193,35 @@ const Products = () => {
       featured: false,
       materials: "Wood, MDF, Paint"
     },
+    {
+      title: "Decorative Arabic Box",
+      category: "Mementos",
+      description: "Premium wooden box with Arabic calligraphy engraving and logo branding. Perfect for awards, gifts, and special recognition items.",
+      image: decorativeBoxArabic,
+      featured: false,
+      materials: "Premium Wood, Laser Engraving"
+    },
+    {
+      title: "Wooden Memento Boxes",
+      category: "Mementos",
+      description: "Collection of elegantly crafted wooden boxes with intricate laser-cut jaali patterns on lids. Ideal for corporate gifts and awards.",
+      image: mementosCollection,
+      featured: false,
+      materials: "Premium Wood, Brass Hardware"
+    },
+    {
+      title: "Student Achievement Mementos",
+      category: "Mementos",
+      description: "Personalized photo mementos for student recognition with custom printing and professional design. Perfect for schools and institutions.",
+      image: studentMementos,
+      featured: false,
+      materials: "Acrylic, UV Print"
+    },
   ];
+
+  const filteredProducts = selectedCategory === "All" 
+    ? products 
+    : products.filter(p => p.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-background">
@@ -179,15 +245,36 @@ const Products = () => {
             Premium Craftsmanship
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover our collection of precision-cut masterpieces, from Islamic art to modern architectural elements
+            Discover our collection of CNC laser cutting, jaali work, and precision-cut masterpieces
           </p>
+        </div>
+
+        {/* Category Filter Shortcuts */}
+        <div className="mb-12">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((cat) => {
+              const Icon = cat.icon;
+              return (
+                <Button
+                  key={cat.name}
+                  onClick={() => setSelectedCategory(cat.name)}
+                  variant={selectedCategory === cat.name ? "default" : "outline"}
+                  size="lg"
+                  className="group transition-all duration-300 hover:scale-105"
+                >
+                  <Icon className="w-5 h-5 mr-2" />
+                  {cat.name}
+                </Button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Featured Products */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8">Featured Work</h2>
+          <h2 className="text-3xl font-bold mb-8">Stunning Featured Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.filter(p => p.featured).map((product, index) => {
+            {filteredProducts.filter(p => p.featured).map((product, index) => {
               const featuredColors = [
                 'bg-gradient-to-br from-emerald-100 to-teal-100',
                 'bg-gradient-to-br from-green-100 to-emerald-100',
@@ -225,9 +312,11 @@ const Products = () => {
 
         {/* All Products */}
         <div>
-          <h2 className="text-3xl font-bold mb-8">More Products</h2>
+          <h2 className="text-3xl font-bold mb-8">
+            {selectedCategory === "All" ? "More Products" : `${selectedCategory} Products`}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {products.filter(p => !p.featured).map((product, index) => {
+            {filteredProducts.filter(p => !p.featured).map((product, index) => {
               const colors = [
                 'bg-gradient-to-br from-emerald-50 to-teal-50',
                 'bg-gradient-to-br from-green-50 to-emerald-50',
