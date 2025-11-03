@@ -14,7 +14,7 @@ const Footer = () => {
               Premium CNC laser cutting for wood, plywood & acrylic.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/routers_jali_cutting/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+              <a href="https://www.instagram.com/routers__cnc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                 <Instagram className="w-6 h-6 text-[#E4405F]" />
               </a>
               <a href="https://www.facebook.com/routersjalicutting" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
