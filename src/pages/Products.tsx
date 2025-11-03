@@ -57,6 +57,9 @@ import studioLogoSign from "@/assets/products/studio-logo-sign.jpg";
 import acrylicNameplateGold from "@/assets/products/acrylic-nameplate-gold.jpg";
 import luxuryGiftBoxOpen from "@/assets/products/luxury-gift-box-open.jpg";
 import luxuryGiftBoxClosed from "@/assets/products/luxury-gift-box-closed.jpg";
+import carvedWoodenDoorPanels from "@/assets/products/carved-wooden-door-panels.jpg";
+import oldSchoolWallSign from "@/assets/products/old-school-wall-sign.jpg";
+import mosqueInteriorJaali from "@/assets/products/mosque-interior-jaali.jpg";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
@@ -475,6 +478,30 @@ const Products = () => {
       image: luxuryGiftBoxClosed,
       featured: false,
       materials: "Wood, Gold Acrylic Base, Laser Cut Lid"
+    },
+    {
+      title: "Carved Wooden Door with Panels",
+      category: "Doors",
+      description: "Exquisite CNC-carved wooden door featuring three ornate panels with floral and geometric motifs. Traditional craftsmanship meets modern precision.",
+      image: carvedWoodenDoorPanels,
+      featured: false,
+      materials: "Premium Hardwood, CNC Carving"
+    },
+    {
+      title: "Old School Event Sign",
+      category: "Signage",
+      description: "Bold black acrylic wall signage with modern typography and leaf accent. Professional event venue branding.",
+      image: oldSchoolWallSign,
+      featured: false,
+      materials: "Black Acrylic, Laser Cut, 3D Letters"
+    },
+    {
+      title: "Mosque Interior Jaali Design",
+      category: "Mosque",
+      description: "Stunning mosque interior featuring full wall Islamic jaali panels, arched entrance, and geometric ceiling patterns. Complete architectural installation.",
+      image: mosqueInteriorJaali,
+      featured: true,
+      materials: "Premium Wood, Jaali Panels, Architectural Design"
     },
   ];
 

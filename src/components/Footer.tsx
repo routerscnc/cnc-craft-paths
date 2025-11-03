@@ -17,7 +17,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/routers__cnc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                 <Instagram className="w-6 h-6 text-[#E4405F]" />
               </a>
-              <a href="https://www.facebook.com/routersjalicutting" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+              <a href="https://www.facebook.com/routersjaalicutting" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                 <Facebook className="w-6 h-6 text-[#1877F2]" />
               </a>
               <a href="https://wa.me/917012530677" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
