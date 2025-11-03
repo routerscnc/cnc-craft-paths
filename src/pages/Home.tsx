@@ -153,8 +153,7 @@ const Home = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              Precision Laser Cutting in{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Precision Laser Cutting in <span className="md:inline block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Wood, Plywood & Acrylic
               </span>
             </h1>
@@ -167,6 +166,11 @@ const Home = () => {
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/contact">
                   Get Quote <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                <Link to="/location">
+                  Location <HomeIcon className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
@@ -183,8 +187,8 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Dot Indicators - Moved Down */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+        {/* Dot Indicators */}
+        <div className="absolute bottom-24 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
           {heroImages.map((_, index) => (
             <button
               key={index}
@@ -308,7 +312,7 @@ const Home = () => {
                   Request Quote <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-primary">
+              <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105 bg-white text-primary hover:bg-white/90">
                 <a href="tel:+917012530677">
                   Call Us Now
                 </a>
