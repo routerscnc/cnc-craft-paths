@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Package, Award, Home as HomeIcon, Grid3x3, DoorOpen, Layers, PaintBucket, Signpost } from "lucide-react";
+import { ArrowLeft, Package, Award, Home as HomeIcon, Grid3x3, DoorOpen, Layers, PaintBucket, Signpost, Gift, MoreHorizontal } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import geometricPanel from "@/assets/products/geometric-panel.jpg";
@@ -47,6 +47,16 @@ import roundNameplate from "@/assets/products/round-nameplate.jpg";
 import businessCardHolders from "@/assets/products/business-card-holders.jpg";
 import portraitMemento from "@/assets/products/portrait-memento.jpg";
 import bismillahPanelLarge from "@/assets/products/bismillah-panel-large.jpg";
+import omPanelWhite from "@/assets/products/om-panel-white.jpg";
+import omPanelRed from "@/assets/products/om-panel-red.jpg";
+import templePanelFrame from "@/assets/products/temple-panel-frame.jpg";
+import peacockFeatherPanels from "@/assets/products/peacock-feather-panels.jpg";
+import customMementosPhoto from "@/assets/products/custom-mementos-photo.jpg";
+import customTrophyAward from "@/assets/products/custom-trophy-award.jpg";
+import studioLogoSign from "@/assets/products/studio-logo-sign.jpg";
+import acrylicNameplateGold from "@/assets/products/acrylic-nameplate-gold.jpg";
+import luxuryGiftBoxOpen from "@/assets/products/luxury-gift-box-open.jpg";
+import luxuryGiftBoxClosed from "@/assets/products/luxury-gift-box-closed.jpg";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
@@ -58,14 +68,17 @@ const Products = () => {
     { name: "Mementos", icon: Award },
     { name: "Panels", icon: Layers },
     { name: "Wall Decor", icon: PaintBucket },
-    { name: "Pooja & Mosques", icon: Package },
+    { name: "Pooja Room", icon: HomeIcon },
+    { name: "Mosque", icon: Package },
     { name: "Signage", icon: Signpost },
+    { name: "Gifts", icon: Gift },
+    { name: "Other", icon: MoreHorizontal },
   ];
 
   const products = [
     {
       title: "Islamic Metal Calligraphy",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Stunning metallic Islamic calligraphy wall art with golden finish. Intricate laser-cut Arabic script perfect for prayer rooms and Islamic décor.",
       image: islamicMetalArt,
       featured: true,
@@ -73,7 +86,7 @@ const Products = () => {
     },
     {
       title: "Wooden Podium",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Elegant wooden podium with intricate jaali panel design. Perfect for mosques, prayer halls, and ceremonial spaces.",
       image: woodenPodium,
       featured: true,
@@ -153,7 +166,7 @@ const Products = () => {
     },
     {
       title: "Ayatul Kursi Calligraphy",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Exquisite Ayatul Kursi wall art with intricate Arabic calligraphy and gold accents on premium wood backdrop.",
       image: ayatulKursi,
       featured: false,
@@ -161,7 +174,7 @@ const Products = () => {
     },
     {
       title: "Asmaul Husna Collection",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Complete 99 Names of Allah displayed in honeycomb hexagonal pattern. Contemporary design meets traditional calligraphy.",
       image: asmaulHusna,
       featured: false,
@@ -169,7 +182,7 @@ const Products = () => {
     },
     {
       title: "Bismillah Gold Edition",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Stunning gold-finished Bismillah calligraphy wall art on dark premium wood. Perfect for modern Islamic interiors.",
       image: bismillahGold,
       featured: false,
@@ -241,7 +254,7 @@ const Products = () => {
     },
     {
       title: "Complete Mosque Interior",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Stunning full mosque interior featuring intricate jaali wall panels, custom wooden podium with jaali patterns, and traditional arched entrance. Complete Islamic architectural design.",
       image: mosqueInterior,
       featured: false,
@@ -249,7 +262,7 @@ const Products = () => {
     },
     {
       title: "Islamic Calligraphy Glass Frame",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Elegant Islamic calligraphy art piece in premium glass frame with wooden stand. Perfect for Islamic prayer rooms and home décor.",
       image: islamicGlassFrame,
       featured: false,
@@ -265,7 +278,7 @@ const Products = () => {
     },
     {
       title: "Mosque Podium with Jaali",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Custom wooden podium featuring Islamic jaali geometric patterns and pointed arch design. Perfect for mosques and prayer halls.",
       image: mosquePodiumJaali,
       featured: false,
@@ -297,7 +310,7 @@ const Products = () => {
     },
     {
       title: "Om Symbol Triangle Décor",
-      category: "Pooja & Mosques",
+      category: "Pooja Room",
       description: "Beautiful triangular wall art featuring Om symbol with intricate decorative borders. Perfect for Hindu prayer rooms and meditation spaces.",
       image: omTriangleDecor,
       featured: false,
@@ -321,7 +334,7 @@ const Products = () => {
     },
     {
       title: "Wedding Memento Gold Frame",
-      category: "Mementos",
+      category: "Gifts",
       description: "Premium acrylic wedding memento with gold accents, custom photo printing, and wooden base. Perfect for celebrating special occasions.",
       image: weddingMementoGold,
       featured: false,
@@ -329,7 +342,7 @@ const Products = () => {
     },
     {
       title: "Islamic Calligraphy Wall Art",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Stunning metallic Islamic calligraphy with gold finish on dark background. Large decorative piece perfect for mosques and prayer rooms.",
       image: islamicCalligraphyGold,
       featured: false,
@@ -377,11 +390,91 @@ const Products = () => {
     },
     {
       title: "Bismillah Large Panel",
-      category: "Pooja & Mosques",
+      category: "Mosque",
       description: "Large CNC-carved wooden panel featuring complete Bismillah calligraphy with decorative border. Premium Islamic wall art.",
       image: bismillahPanelLarge,
       featured: false,
       materials: "Premium Wood, CNC Carving"
+    },
+    {
+      title: "Om Panel White Design",
+      category: "Pooja Room",
+      description: "Sacred Om symbol panel with bells and decorative motifs in white. Traditional Hindu prayer room décor with intricate laser-cut details.",
+      image: omPanelWhite,
+      featured: false,
+      materials: "Wood, White Acrylic, Laser Cut"
+    },
+    {
+      title: "Om Panel Red Colored",
+      category: "Pooja Room",
+      description: "Vibrant red Om symbol panel with Hindu religious symbols. Bold design perfect for pooja rooms and spiritual spaces.",
+      image: omPanelRed,
+      featured: false,
+      materials: "Wood, Colored Acrylic, Laser Cut"
+    },
+    {
+      title: "Temple Panel with Frame",
+      category: "Pooja Room",
+      description: "Beautiful temple-themed decorative panel in wooden frame featuring lotus, bells, and traditional Hindu motifs. Perfect for pooja room wall art.",
+      image: templePanelFrame,
+      featured: false,
+      materials: "Wood Frame, White Acrylic, Multi-layer Design"
+    },
+    {
+      title: "Peacock Feather Panels",
+      category: "Pooja Room",
+      description: "Elegant pair of white panels with peacock feather designs. Symbol of Lord Krishna, perfect for spiritual and decorative purposes.",
+      image: peacockFeatherPanels,
+      featured: false,
+      materials: "Wood, White Finish, Laser Cut"
+    },
+    {
+      title: "Custom Photo Mementos",
+      category: "Gifts",
+      description: "Personalized wooden awards with photo portraits and custom Malayalam text. Perfect for professional recognition and honors.",
+      image: customMementosPhoto,
+      featured: false,
+      materials: "Premium Wood, Photo Engraving, Acrylic"
+    },
+    {
+      title: "Custom Trophy Award",
+      category: "Gifts",
+      description: "Premium carved wooden trophy with hands motif and Malayalam text. Unique recognition award for special achievements.",
+      image: customTrophyAward,
+      featured: false,
+      materials: "Premium Wood, CNC Carving, Wood Base"
+    },
+    {
+      title: "Studio Logo Sign",
+      category: "Signage",
+      description: "Professional studio signage with artistic Shiva logo design. Large format laser-cut sign perfect for business branding.",
+      image: studioLogoSign,
+      featured: false,
+      materials: "Wood, White Finish, Laser Engraving"
+    },
+    {
+      title: "Acrylic Nameplate Gold",
+      category: "Signage",
+      description: "Elegant black acrylic nameplate with gold lettering. Premium curved design for homes and businesses.",
+      image: acrylicNameplateGold,
+      featured: false,
+      materials: "Black Acrylic, Gold Vinyl Lettering"
+    },
+    {
+      title: "Luxury Gift Box Open",
+      category: "Gifts",
+      description: "Premium wooden gift box with intricate jaali lid and personalized message engraving. Perfect for special occasions and corporate gifting.",
+      image: luxuryGiftBoxOpen,
+      featured: false,
+      materials: "Premium Wood, Jaali Work, Laser Engraving"
+    },
+    {
+      title: "Luxury Gift Box Closed",
+      category: "Gifts",
+      description: "Elegant decorative gift box with ornate laser-cut wooden lid on gold base. Perfect for high-end gifting and presentations.",
+      image: luxuryGiftBoxClosed,
+      featured: false,
+      materials: "Wood, Gold Acrylic Base, Laser Cut Lid"
     },
   ];
 
