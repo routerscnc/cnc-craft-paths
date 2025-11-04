@@ -168,7 +168,7 @@ const Home = () => {
                   Get Quote <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
+              <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/location">
                   Location <HomeIcon className="ml-2 w-5 h-5" />
                 </Link>
