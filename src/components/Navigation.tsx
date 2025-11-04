@@ -23,7 +23,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center transition-transform hover:scale-105">
-            <img src={routersLogo} alt="ROUTERS Logo" className="h-14 md:h-20 w-auto" />
+            <img src={routersLogo} alt="ROUTERS Logo" className="h-12 md:h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -46,11 +46,11 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-1.5"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
