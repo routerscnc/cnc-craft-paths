@@ -344,6 +344,14 @@ const Products = () => {
       materials: "Acrylic, Gold Print, Wood Base"
     },
     {
+      title: "Wedding Memento Gold Frame",
+      category: "Mementos",
+      description: "Premium acrylic wedding memento with gold accents, custom photo printing, and wooden base. Perfect for celebrating special occasions.",
+      image: weddingMementoGold,
+      featured: false,
+      materials: "Acrylic, Gold Print, Wood Base"
+    },
+    {
       title: "Islamic Calligraphy Wall Art",
       category: "Mosque",
       description: "Stunning metallic Islamic calligraphy with gold finish on dark background. Large decorative piece perfect for mosques and prayer rooms.",
@@ -440,8 +448,24 @@ const Products = () => {
       materials: "Premium Wood, Photo Engraving, Acrylic"
     },
     {
+      title: "Custom Photo Mementos",
+      category: "Mementos",
+      description: "Personalized wooden awards with photo portraits and custom Malayalam text. Perfect for professional recognition and honors.",
+      image: customMementosPhoto,
+      featured: false,
+      materials: "Premium Wood, Photo Engraving, Acrylic"
+    },
+    {
       title: "Custom Trophy Award",
       category: "Gifts",
+      description: "Premium carved wooden trophy with hands motif and Malayalam text. Unique recognition award for special achievements.",
+      image: customTrophyAward,
+      featured: false,
+      materials: "Premium Wood, CNC Carving, Wood Base"
+    },
+    {
+      title: "Custom Trophy Award",
+      category: "Mementos",
       description: "Premium carved wooden trophy with hands motif and Malayalam text. Unique recognition award for special achievements.",
       image: customTrophyAward,
       featured: false,
@@ -472,8 +496,24 @@ const Products = () => {
       materials: "Premium Wood, Jaali Work, Laser Engraving"
     },
     {
+      title: "Luxury Gift Box Open",
+      category: "Mementos",
+      description: "Premium wooden gift box with intricate jaali lid and personalized message engraving. Perfect for special occasions and corporate gifting.",
+      image: luxuryGiftBoxOpen,
+      featured: false,
+      materials: "Premium Wood, Jaali Work, Laser Engraving"
+    },
+    {
       title: "Luxury Gift Box Closed",
       category: "Gifts",
+      description: "Elegant decorative gift box with ornate laser-cut wooden lid on gold base. Perfect for high-end gifting and presentations.",
+      image: luxuryGiftBoxClosed,
+      featured: false,
+      materials: "Wood, Gold Acrylic Base, Laser Cut Lid"
+    },
+    {
+      title: "Luxury Gift Box Closed",
+      category: "Mementos",
       description: "Elegant decorative gift box with ornate laser-cut wooden lid on gold base. Perfect for high-end gifting and presentations.",
       image: luxuryGiftBoxClosed,
       featured: false,
