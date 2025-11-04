@@ -150,7 +150,7 @@ const Home = () => {
         </div>
 
         {/* Dot Indicators */}
-        <div className="absolute bottom-24 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+        <div className="absolute bottom-16 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
           {heroImages.map((_, index) => <button key={index} onClick={() => carouselApi?.scrollTo(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${current === index ? "bg-white w-8" : "bg-white/50 hover:bg-white/70"}`} aria-label={`Go to slide ${index + 1}`} />)}
         </div>
       </section>
