@@ -2,11 +2,7 @@ import { Link } from "react-router-dom";
 import { Check, Zap, Shield, Award, ArrowRight, Home as HomeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroCNC from "@/assets/hero-cnc-clean.jpg";
@@ -23,131 +19,93 @@ import carvedCabinet from "@/assets/products/carved-cabinet.jpg";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect } from "react";
 import type { CarouselApi } from "@/components/ui/carousel";
-
 const Home = () => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-
-  const heroImages = [
-    heroCNC,
-    heroCNC2,
-    heroCNC3,
-  ];
-
+  const heroImages = [heroCNC, heroCNC2, heroCNC3];
   useEffect(() => {
     if (!carouselApi) {
       return;
     }
-
     setCurrent(carouselApi.selectedScrollSnap());
-
     carouselApi.on("select", () => {
       setCurrent(carouselApi.selectedScrollSnap());
     });
   }, [carouselApi]);
-
-  const features = [
-    {
-      icon: Zap,
-      title: "Precision Cutting",
-      description: "Laser-accurate cuts for intricate patterns and perfect finishes",
-    },
-    {
-      icon: Shield,
-      title: "Quality Materials",
-      description: "Premium wood, plywood & acrylic for lasting excellence",
-    },
-    {
-      icon: Award,
-      title: "Expert Craftsmanship",
-      description: "Years of experience creating custom designs",
-    },
-  ];
-
-  const featuredProducts = [
-    {
-      image: geometricPanel,
-      title: "Geometric Jaali Panel",
-      description: "Intricate laser-cut patterns perfect for modern interiors and partitions",
-    },
-    {
-      image: illuminatedCabinet,
-      title: "Illuminated Cabinet",
-      description: "Beautiful backlit Islamic pattern cabinet with LED integration",
-    },
-    {
-      image: carvedPanels,
-      title: "Carved Wall Panels",
-      description: "Ornate wooden wall art panels with traditional carved designs",
-    },
-    {
-      image: poojaDoor,
-      title: "Pooja Room Door",
-      description: "Custom glass door with Hindu religious symbols and intricate patterns",
-    },
-    {
-      image: islamicClock,
-      title: "Islamic Wall Clock",
-      description: "Crescent moon design wall clock with mosque silhouette",
-    },
-    {
-      image: jaaliScreen,
-      title: "Large Jaali Screen",
-      description: "Premium cream-colored jaali panels for room dividers and décor",
-    },
-    {
-      image: whiteDivider,
-      title: "White Room Divider",
-      description: "Elegant white decorative panels for space separation",
-    },
-    {
-      image: carvedCabinet,
-      title: "Luxury Carved Cabinet",
-      description: "Ornate wooden cabinet with exquisite floral carved patterns",
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const features = [{
+    icon: Zap,
+    title: "Precision Cutting",
+    description: "Laser-accurate cuts for intricate patterns and perfect finishes"
+  }, {
+    icon: Shield,
+    title: "Quality Materials",
+    description: "Premium wood, plywood & acrylic for lasting excellence"
+  }, {
+    icon: Award,
+    title: "Expert Craftsmanship",
+    description: "Years of experience creating custom designs"
+  }];
+  const featuredProducts = [{
+    image: geometricPanel,
+    title: "Geometric Jaali Panel",
+    description: "Intricate laser-cut patterns perfect for modern interiors and partitions"
+  }, {
+    image: illuminatedCabinet,
+    title: "Illuminated Cabinet",
+    description: "Beautiful backlit Islamic pattern cabinet with LED integration"
+  }, {
+    image: carvedPanels,
+    title: "Carved Wall Panels",
+    description: "Ornate wooden wall art panels with traditional carved designs"
+  }, {
+    image: poojaDoor,
+    title: "Pooja Room Door",
+    description: "Custom glass door with Hindu religious symbols and intricate patterns"
+  }, {
+    image: islamicClock,
+    title: "Islamic Wall Clock",
+    description: "Crescent moon design wall clock with mosque silhouette"
+  }, {
+    image: jaaliScreen,
+    title: "Large Jaali Screen",
+    description: "Premium cream-colored jaali panels for room dividers and décor"
+  }, {
+    image: whiteDivider,
+    title: "White Room Divider",
+    description: "Elegant white decorative panels for space separation"
+  }, {
+    image: carvedCabinet,
+    title: "Luxury Carved Cabinet",
+    description: "Ornate wooden cabinet with exquisite floral carved patterns"
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section with Carousel */}
       <section className="relative min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden">
-        <Carousel
-          setApi={setCarouselApi}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          plugins={[
-            Autoplay({
-              delay: 4000,
-            }),
-          ]}
-          className="w-full h-full absolute inset-0"
-        >
+        <Carousel setApi={setCarouselApi} opts={{
+        align: "start",
+        loop: true
+      }} plugins={[Autoplay({
+        delay: 4000
+      })]} className="w-full h-full absolute inset-0">
           <CarouselContent className="h-full">
-            {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="h-full">
-                <div
-                  className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
-                  style={{
-                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.3), rgba(30, 41, 59, 0.3)), url(${image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                >
+            {heroImages.map((image, index) => <CarouselItem key={index} className="h-full">
+                <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{
+              backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.3), rgba(30, 41, 59, 0.3)), url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}>
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-background opacity-20" />
                 </div>
-              </CarouselItem>
-            ))}
+              </CarouselItem>)}
           </CarouselContent>
         </Carousel>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
             <div className="inline-block">
-              <span className="inline-block px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full text-primary font-semibold text-sm mb-6 border border-primary/20">
+              <span className="inline-block px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full font-semibold text-sm mb-6 border border-primary/20 text-lime-300">
                 Premium CNC Laser Cutting Services
               </span>
             </div>
@@ -189,18 +147,7 @@ const Home = () => {
 
         {/* Dot Indicators */}
         <div className="absolute bottom-24 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => carouselApi?.scrollTo(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                current === index
-                  ? "bg-white w-8"
-                  : "bg-white/50 hover:bg-white/70"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          {heroImages.map((_, index) => <button key={index} onClick={() => carouselApi?.scrollTo(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${current === index ? "bg-white w-8" : "bg-white/50 hover:bg-white/70"}`} aria-label={`Go to slide ${index + 1}`} />)}
         </div>
       </section>
 
@@ -217,11 +164,7 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 bg-card/50 backdrop-blur-sm"
-              >
+            {features.map((feature, index) => <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-8 text-center space-y-4">
                   <div className="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <feature.icon className="w-8 h-8 text-primary-foreground" />
@@ -231,8 +174,7 @@ const Home = () => {
                     {feature.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -251,27 +193,10 @@ const Home = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {featuredProducts.map((product, index) => {
-              const colors = [
-                'bg-gradient-to-br from-emerald-50 to-teal-50',
-                'bg-gradient-to-br from-green-50 to-emerald-50',
-                'bg-gradient-to-br from-teal-50 to-cyan-50',
-                'bg-gradient-to-br from-lime-50 to-green-50',
-                'bg-gradient-to-br from-emerald-50 to-green-50',
-                'bg-gradient-to-br from-teal-50 to-emerald-50',
-                'bg-gradient-to-br from-cyan-50 to-teal-50',
-                'bg-gradient-to-br from-green-50 to-teal-50'
-              ];
-              return (
-              <Card 
-                key={index} 
-                className={`group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/50 cursor-pointer ${colors[index % colors.length]}`}
-              >
+            const colors = ['bg-gradient-to-br from-emerald-50 to-teal-50', 'bg-gradient-to-br from-green-50 to-emerald-50', 'bg-gradient-to-br from-teal-50 to-cyan-50', 'bg-gradient-to-br from-lime-50 to-green-50', 'bg-gradient-to-br from-emerald-50 to-green-50', 'bg-gradient-to-br from-teal-50 to-emerald-50', 'bg-gradient-to-br from-cyan-50 to-teal-50', 'bg-gradient-to-br from-green-50 to-teal-50'];
+            return <Card key={index} className={`group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/50 cursor-pointer ${colors[index % colors.length]}`}>
                 <div className="relative aspect-square overflow-hidden">
-                  <img 
-                    src={product.image} 
-                    alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <img src={product.image} alt={product.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <CardContent className="p-6 space-y-2">
@@ -282,8 +207,8 @@ const Home = () => {
                     {product.description}
                   </p>
                 </CardContent>
-              </Card>
-            )})}
+              </Card>;
+          })}
           </div>
 
           <div className="text-center">
@@ -323,8 +248,6 @@ const Home = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
