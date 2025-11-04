@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Check, Zap, Shield, Award, ArrowRight, Home as HomeIcon } from "lucide-react";
+import { Check, Zap, Shield, Award, ArrowRight, MapPin, MessageSquare, Package, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -123,21 +123,25 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/contact">
-                  Get Quote <ArrowRight className="ml-2 w-5 h-5" />
+                  <MessageSquare className="mr-2 w-5 h-5" />
+                  Get Quote
                 </Link>
               </Button>
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/location">
-                  Location <HomeIcon className="ml-2 w-5 h-5" />
+                  <MapPin className="mr-2 w-5 h-5" />
+                  Location
                 </Link>
               </Button>
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/products">
+                  <Package className="mr-2 w-5 h-5" />
                   View Products
                 </Link>
               </Button>
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/services">
+                  <Settings className="mr-2 w-5 h-5" />
                   Our Services
                 </Link>
               </Button>
