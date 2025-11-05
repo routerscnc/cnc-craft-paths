@@ -125,7 +125,7 @@ const Home = () => {
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/products">
                   <Package className="mr-2 w-5 h-5" />
-                  View Catalog
+                  Products
                 </Link>
               </Button>
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
@@ -137,7 +137,13 @@ const Home = () => {
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/services">
                   <Settings className="mr-2 w-5 h-5" />
-                  Our Services
+                  Services
+                </Link>
+              </Button>
+              <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                <Link to="/contact">
+                  <MessageSquare className="mr-2 w-5 h-5" />
+                  Contact
                 </Link>
               </Button>
             </div>
