@@ -11,13 +11,13 @@ const Footer = () => {
               ROUTERS
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Premium CNC / Jaali / Laser Cutting for wood, plywood & acrylic.
+              Premium CNC / Jali / Laser Cutting for wood, plywood & acrylic.
             </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/routers__cnc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                 <Instagram className="w-6 h-6 text-[#E4405F]" />
               </a>
-              <a href="https://www.facebook.com/routersjaalicutting" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+              <a href="https://www.facebook.com/routersjalicutting" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                 <Facebook className="w-6 h-6 text-[#1877F2]" />
               </a>
               <a href="https://wa.me/917012530677" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
@@ -56,8 +56,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:routersjaalicutting@gmail.com" className="hover:text-primary transition-colors break-all">
-                  routersjaalicutting@gmail.com
+                <a href="mailto:routersjalicutting@gmail.com" className="hover:text-primary transition-colors break-all">
+                  routersjalicutting@gmail.com
                 </a>
               </div>
               <div className="flex items-start gap-2">
@@ -83,7 +83,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ROUTERS CNC / Jaali / Laser Cutting. All rights reserved.
+            © {new Date().getFullYear()} ROUTERS CNC / Jali / Laser Cutting. All rights reserved.
           </p>
         </div>
       </div>

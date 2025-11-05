@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Check, Zap, Shield, Award, ArrowRight, MapPin, MessageSquare, Package, Settings } from "lucide-react";
+import { Check, Zap, Shield, Award, ArrowRight, MapPin, MessageSquare, Package, Settings, Book } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -14,7 +14,7 @@ import illuminatedCabinet from "@/assets/products/illuminated-cabinet.jpg";
 import carvedPanels from "@/assets/products/carved-wall-panels.jpg";
 import poojaDoor from "@/assets/products/pooja-door.jpg";
 import islamicClock from "@/assets/products/islamic-clock.jpg";
-import jaaliScreen from "@/assets/products/jaali-screen-large.jpg";
+import jaliScreen from "@/assets/products/jaali-screen-large.jpg";
 import whiteDivider from "@/assets/products/white-divider.jpg";
 import carvedCabinet from "@/assets/products/carved-cabinet.jpg";
 import Autoplay from "embla-carousel-autoplay";
@@ -36,7 +36,7 @@ const Home = () => {
   const features = [{
     icon: Zap,
     title: "Precision Cutting",
-    description: "CNC routing, jaali pattern work, and laser-accurate cuts for intricate designs"
+    description: "CNC routing, jali pattern work, and laser-accurate cuts for intricate designs"
   }, {
     icon: Shield,
     title: "Quality Materials",
@@ -48,7 +48,7 @@ const Home = () => {
   }];
   const featuredProducts = [{
     image: geometricPanel,
-    title: "Geometric Jaali Panel",
+    title: "Geometric Jali Panel",
     description: "Intricate laser-cut patterns perfect for modern interiors and partitions"
   }, {
     image: illuminatedCabinet,
@@ -67,9 +67,9 @@ const Home = () => {
     title: "Islamic Wall Clock",
     description: "Crescent moon design wall clock with mosque silhouette"
   }, {
-    image: jaaliScreen,
-    title: "Large Jaali Screen",
-    description: "Premium cream-colored jaali panels for room dividers and décor"
+    image: jaliScreen,
+    title: "Large Jali Screen",
+    description: "Premium cream-colored jali panels for room dividers and décor"
   }, {
     image: whiteDivider,
     title: "White Room Divider",
@@ -107,12 +107,12 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
             <div className="inline-block">
               <span className="inline-block px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full font-semibold text-sm mb-6 border border-primary/20 text-lime-300">
-                Premium CNC / Jaali / Laser Cutting Services
+                Premium CNC / Jali / Laser Cutting Services
               </span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              Precision CNC / Jaali / Laser Cutting in <span className="md:inline block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Precision CNC / Jali / Laser Cutting in <span className="md:inline block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Wood, Plywood & Acrylic
               </span>
             </h1>
@@ -138,6 +138,12 @@ const Home = () => {
                 <Link to="/services">
                   <Settings className="mr-2 w-5 h-5" />
                   Services
+                </Link>
+              </Button>
+              <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                <Link to="/products">
+                  <Book className="mr-2 w-5 h-5" />
+                  Catalog
                 </Link>
               </Button>
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
@@ -237,7 +243,7 @@ const Home = () => {
               Ready to Bring Your Vision to Life?
             </h2>
             <p className="text-xl opacity-90 leading-relaxed">
-              Get a custom quote for your CNC / Jaali / Laser cutting project today. Our team is ready to help you create something extraordinary.
+              Get a custom quote for your CNC / Jali / Laser cutting project today. Our team is ready to help you create something extraordinary.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105">

@@ -75,7 +75,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-4">Get in Touch</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your CNC / Jaali / Laser cutting project? Send us a message and we'll respond within 24 hours
+            Ready to start your CNC / Jali / Laser cutting project? Send us a message and we'll respond within 24 hours
           </p>
         </div>
 
@@ -185,8 +185,8 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-accent mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <a href="mailto:routersjaalicutting@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
-                      routersjaalicutting@gmail.com
+                    <a href="mailto:routersjalicutting@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
+                      routersjalicutting@gmail.com
                     </a>
                   </div>
                 </div>

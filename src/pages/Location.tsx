@@ -111,8 +111,8 @@ const Location = () => {
                   <div>
                     <h3 className="font-semibold mb-2">Email</h3>
                     <p className="text-muted-foreground text-sm">
-                      <a href="mailto:routersjaalicutting@gmail.com" className="hover:text-primary transition-colors break-all">
-                        routersjaalicutting@gmail.com
+                      <a href="mailto:routersjalicutting@gmail.com" className="hover:text-primary transition-colors break-all">
+                        routersjalicutting@gmail.com
                       </a>
                     </p>
                   </div>

@@ -11,13 +11,13 @@ import illuminatedCabinet from "@/assets/products/illuminated-cabinet.jpg";
 import carvedPanels from "@/assets/products/carved-wall-panels.jpg";
 import poojaDoor from "@/assets/products/pooja-door.jpg";
 import islamicClock from "@/assets/products/islamic-clock.jpg";
-import jaaliScreen from "@/assets/products/jaali-screen-large.jpg";
+import jaliScreen from "@/assets/products/jaali-screen-large.jpg";
 import whiteDivider from "@/assets/products/white-divider.jpg";
 import carvedCabinet from "@/assets/products/carved-cabinet.jpg";
 import ayatulKursi from "@/assets/products/ayatul-kursi.jpg";
 import asmaulHusna from "@/assets/products/asmaul-husna.jpg";
 import bismillahGold from "@/assets/products/bismillah-gold.jpg";
-import jaaliPanel from "@/assets/products/jaali-panel.jpg";
+import jaliPanel from "@/assets/products/jaali-panel.jpg";
 import customNameplate from "@/assets/products/custom-nameplate-darul.jpg";
 import luxuryDoor from "@/assets/products/luxury-door.jpg";
 import sportsTrophies from "@/assets/products/sports-trophies.jpg";
@@ -32,7 +32,7 @@ import mosqueInterior from "@/assets/products/mosque-interior.jpg";
 import islamicGlassFrame from "@/assets/products/islamic-glass-frame.jpg";
 import radialDoorPanel from "@/assets/products/radial-door-panel.jpg";
 import radialDoorFull from "@/assets/products/radial-door-full.jpg";
-import mosquePodiumJaali from "@/assets/products/mosque-podium-jaali.jpg";
+import mosquePodiumJali from "@/assets/products/mosque-podium-jaali.jpg";
 import customSignRed from "@/assets/products/custom-sign-red.jpg";
 import basketweaveDoor from "@/assets/products/basketweave-door.jpg";
 import cityDriveSign from "@/assets/products/city-drive-sign.jpg";
@@ -59,7 +59,7 @@ import luxuryGiftBoxOpen from "@/assets/products/luxury-gift-box-open.jpg";
 import luxuryGiftBoxClosed from "@/assets/products/luxury-gift-box-closed.jpg";
 import carvedWoodenDoorPanels from "@/assets/products/carved-wooden-door-panels.jpg";
 import oldSchoolWallSign from "@/assets/products/old-school-wall-sign.jpg";
-import mosqueInteriorJaali from "@/assets/products/mosque-interior-jaali.jpg";
+import mosqueInteriorJali from "@/assets/products/mosque-interior-jaali.jpg";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
@@ -92,7 +92,7 @@ const Products = () => {
     {
       title: "Wooden Podium",
       category: "Mosque",
-      description: "Elegant wooden podium with intricate jaali panel design. Perfect for mosques, prayer halls, and ceremonial spaces.",
+      description: "Elegant wooden podium with intricate jali panel design. Perfect for mosques, prayer halls, and ceremonial spaces.",
       image: woodenPodium,
       featured: true,
       materials: "Premium Hardwood"
@@ -106,7 +106,7 @@ const Products = () => {
       materials: "Premium Wood, Laser Engraving"
     },
     {
-      title: "Geometric Jaali Panel",
+      title: "Geometric Jali Panel",
       category: "Panels",
       description: "Intricate laser-cut geometric patterns perfect for modern interiors and partitions. Features complex Greek key and floral motifs in high-quality wood.",
       image: geometricPanel,
@@ -140,16 +140,16 @@ const Products = () => {
     {
       title: "Islamic Crescent Wall Clock",
       category: "Wall Decor",
-      description: "Crescent moon design wall clock featuring mosque silhouette with intricate jaali pattern details. Functional art piece.",
+      description: "Crescent moon design wall clock featuring mosque silhouette with intricate jali pattern details. Functional art piece.",
       image: islamicClock,
       featured: false,
       materials: "Wood, Clock Mechanism"
     },
     {
-      title: "Large Jaali Screen Panels",
+      title: "Large Jali Screen Panels",
       category: "Panels",
-      description: "Premium cream-colored jaali panels in traditional Islamic geometric patterns. Ideal for creating elegant space divisions or decorative backdrops.",
-      image: jaaliScreen,
+      description: "Premium cream-colored jali panels in traditional Islamic geometric patterns. Ideal for creating elegant space divisions or decorative backdrops.",
+      image: jaliScreen,
       featured: false,
       materials: "Premium MDF, Wood"
     },
@@ -194,10 +194,10 @@ const Products = () => {
       materials: "Wood, Gold Acrylic Finish"
     },
     {
-      title: "Traditional Jaali Panel",
+      title: "Traditional Jali Panel",
       category: "Panels",
-      description: "Classic Islamic geometric pattern jaali panel for windows, doors, or decorative wall elements.",
-      image: jaaliPanel,
+      description: "Classic Islamic geometric pattern jali panel for windows, doors, or decorative wall elements.",
+      image: jaliPanel,
       featured: false,
       materials: "Wood, MDF, Plywood"
     },
@@ -244,7 +244,7 @@ const Products = () => {
     {
       title: "Wooden Memento Boxes",
       category: "Mementos",
-      description: "Collection of elegantly crafted wooden boxes with intricate laser-cut jaali patterns on lids. Ideal for corporate gifts and awards.",
+      description: "Collection of elegantly crafted wooden boxes with intricate laser-cut jali patterns on lids. Ideal for corporate gifts and awards.",
       image: mementosCollection,
       featured: false,
       materials: "Premium Wood, Brass Hardware"
@@ -260,10 +260,10 @@ const Products = () => {
     {
       title: "Complete Mosque Interior",
       category: "Mosque",
-      description: "Stunning full mosque interior featuring intricate jaali wall panels, custom wooden podium with jaali patterns, and traditional arched entrance. Complete Islamic architectural design.",
+      description: "Stunning full mosque interior featuring intricate jali wall panels, custom wooden podium with jali patterns, and traditional arched entrance. Complete Islamic architectural design.",
       image: mosqueInterior,
       featured: false,
-      materials: "Premium Wood, Jaali Panels"
+      materials: "Premium Wood, Jali Panels"
     },
     {
       title: "Islamic Calligraphy Glass Frame",
@@ -282,12 +282,12 @@ const Products = () => {
       materials: "Premium Hardwood, CNC Carving"
     },
     {
-      title: "Mosque Podium with Jaali",
+      title: "Mosque Podium with Jali",
       category: "Mosque",
-      description: "Custom wooden podium featuring Islamic jaali geometric patterns and pointed arch design. Perfect for mosques and prayer halls.",
-      image: mosquePodiumJaali,
+      description: "Custom wooden podium featuring Islamic jali geometric patterns and pointed arch design. Perfect for mosques and prayer halls.",
+      image: mosquePodiumJali,
       featured: false,
-      materials: "Hardwood, Jaali Work"
+      materials: "Hardwood, Jali Work"
     },
     {
       title: "Basket Weave Pattern Door",
@@ -492,18 +492,18 @@ const Products = () => {
     {
       title: "Luxury Gift Box Open",
       category: "Gifts",
-      description: "Premium wooden gift box with intricate jaali lid and personalized message engraving. Perfect for special occasions and corporate gifting.",
+      description: "Premium wooden gift box with intricate jali lid and personalized message engraving. Perfect for special occasions and corporate gifting.",
       image: luxuryGiftBoxOpen,
       featured: false,
-      materials: "Premium Wood, Jaali Work, Laser Engraving"
+      materials: "Premium Wood, Jali Work, Laser Engraving"
     },
     {
       title: "Luxury Gift Box Open",
       category: "Mementos",
-      description: "Premium wooden gift box with intricate jaali lid and personalized message engraving. Perfect for special occasions and corporate gifting.",
+      description: "Premium wooden gift box with intricate jali lid and personalized message engraving. Perfect for special occasions and corporate gifting.",
       image: luxuryGiftBoxOpen,
       featured: false,
-      materials: "Premium Wood, Jaali Work, Laser Engraving"
+      materials: "Premium Wood, Jali Work, Laser Engraving"
     },
     {
       title: "Luxury Gift Box Closed",
@@ -538,12 +538,12 @@ const Products = () => {
       materials: "Black Acrylic, Laser Cut, 3D Letters"
     },
     {
-      title: "Mosque Interior Jaali Design",
+      title: "Mosque Interior Jali Design",
       category: "Mosque",
-      description: "Stunning mosque interior featuring full wall Islamic jaali panels, arched entrance, and geometric ceiling patterns. Complete architectural installation.",
-      image: mosqueInteriorJaali,
+      description: "Stunning mosque interior featuring full wall Islamic jali panels, arched entrance, and geometric ceiling patterns. Complete architectural installation.",
+      image: mosqueInteriorJali,
       featured: true,
-      materials: "Premium Wood, Jaali Panels, Architectural Design"
+      materials: "Premium Wood, Jali Panels, Architectural Design"
     },
   ];
 

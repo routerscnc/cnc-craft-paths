@@ -9,7 +9,7 @@ const Services = () => {
   const services = [
     {
       icon: Zap,
-      title: "CNC / Jaali / Laser Cutting",
+      title: "CNC / Jali / Laser Cutting",
       description: "High-precision cutting for wood, acrylic, and composite materials with tolerances up to 0.1mm",
       capabilities: [
         "Wood, Plywood, Multiwood",
@@ -31,13 +31,13 @@ const Services = () => {
     },
     {
       icon: Ruler,
-      title: "Interior Jaali Works",
-      description: "Traditional and modern jaali designs for partitions, screens and decorative elements",
+      title: "Interior Jali Works",
+      description: "Traditional and modern jali designs for partitions, screens and decorative elements",
       capabilities: [
         "Room partition panels",
         "Geometric patterns",
         "Islamic designs",
-        "Custom jaali screens"
+        "Custom jali screens"
       ]
     },
     {
@@ -47,7 +47,7 @@ const Services = () => {
       capabilities: [
         "Custom wooden nameplates",
         "Trophies and mementos",
-        "Interior jaali panels",
+        "Interior jali panels",
         "Personalized wooden gifts"
       ]
     },
@@ -94,10 +94,10 @@ const Services = () => {
             <span className="text-sm font-semibold text-accent uppercase tracking-wider">What We Offer</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Precision CNC / Jaali / Laser Cutting Services
+            Precision CNC / Jali / Laser Cutting Services
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Specializing in CNC routing, jaali pattern work, and laser precision for wood, plywood, multiwood, and acrylic - from intricate Islamic art to modern architectural elements
+            Specializing in CNC routing, jali pattern work, and laser precision for wood, plywood, multiwood, and acrylic - from intricate Islamic art to modern architectural elements
           </p>
         </div>
 

@@ -19,7 +19,7 @@ const LaserAnimation = () => {
               Watch Our Precision in Action
             </h2>
             <p className="text-muted-foreground text-lg">
-              CNC routing, jaali pattern work, and laser precision combined
+              CNC routing, jali pattern work, and laser precision combined
             </p>
           </div>
 
@@ -111,7 +111,7 @@ const LaserAnimation = () => {
               <div className="text-sm text-muted-foreground">Routing</div>
             </div>
             <div className="p-4 bg-card/50 rounded-lg border border-border">
-              <div className="text-2xl font-bold text-accent mb-1">Jaali</div>
+              <div className="text-2xl font-bold text-accent mb-1">Jali</div>
               <div className="text-sm text-muted-foreground">Pattern Work</div>
             </div>
             <div className="p-4 bg-card/50 rounded-lg border border-border">
