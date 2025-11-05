@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Package, Award, Home as HomeIcon, Grid3x3, DoorOpen, Layers, PaintBucket, Signpost, Gift, MoreHorizontal } from "lucide-react";
+import { ArrowLeft, Package, Award, Home as HomeIcon, Grid3x3, DoorOpen, Layers, PaintBucket, Signpost, Gift, MoreHorizontal, ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import geometricPanel from "@/assets/products/geometric-panel.jpg";
@@ -64,6 +64,8 @@ import mosqueInteriorJaali from "@/assets/products/mosque-interior-jaali.jpg";
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 24;
 
   const categories = [
     { name: "All", icon: Grid3x3 },
@@ -549,6 +551,19 @@ const Products = () => {
     ? products 
     : products.filter(p => p.category === selectedCategory);
 
+  const featuredProducts = filteredProducts.filter(p => p.featured);
+  const regularProducts = filteredProducts.filter(p => !p.featured);
+  
+  const totalPages = Math.ceil(regularProducts.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const paginatedProducts = regularProducts.slice(startIndex, endIndex);
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1); // Reset to first page when category changes
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -583,7 +598,7 @@ const Products = () => {
               return (
                 <Button
                   key={cat.name}
-                  onClick={() => setSelectedCategory(cat.name)}
+                  onClick={() => handleCategoryChange(cat.name)}
                   variant={selectedCategory === cat.name ? "default" : "outline"}
                   size="lg"
                   className="group transition-all duration-300 hover:scale-105"
@@ -597,10 +612,11 @@ const Products = () => {
         </div>
 
         {/* Featured Products */}
+        {featuredProducts.length > 0 && (
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-8">Stunning Featured Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {filteredProducts.filter(p => p.featured).map((product, index) => {
+            {featuredProducts.map((product, index) => {
               const featuredColors = [
                 'bg-gradient-to-br from-emerald-100 to-teal-100',
                 'bg-gradient-to-br from-green-100 to-emerald-100',
@@ -635,14 +651,20 @@ const Products = () => {
             )})}
           </div>
         </div>
+        )}
 
         {/* All Products */}
         <div>
-          <h2 className="text-3xl font-bold mb-8">
-            {selectedCategory === "All" ? "More Products" : `${selectedCategory} Products`}
-          </h2>
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold">
+              {selectedCategory === "All" ? "All Products" : `${selectedCategory} Products`}
+            </h2>
+            <span className="text-sm text-muted-foreground">
+              Showing {startIndex + 1}-{Math.min(endIndex, regularProducts.length)} of {regularProducts.length} products
+            </span>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {filteredProducts.filter(p => !p.featured).map((product, index) => {
+            {paginatedProducts.map((product, index) => {
               const colors = [
                 'bg-gradient-to-br from-emerald-50 to-teal-50',
                 'bg-gradient-to-br from-green-50 to-emerald-50',
@@ -677,6 +699,47 @@ const Products = () => {
               </Card>
             )})}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-2 mt-12">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                disabled={currentPage === 1}
+                className="gap-2"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                Previous
+              </Button>
+              
+              <div className="flex gap-2">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <Button
+                    key={page}
+                    variant={currentPage === page ? "default" : "outline"}
+                    size="lg"
+                    onClick={() => setCurrentPage(page)}
+                    className="min-w-[3rem]"
+                  >
+                    {page}
+                  </Button>
+                ))}
+              </div>
+
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                disabled={currentPage === totalPages}
+                className="gap-2"
+              >
+                Next
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* CTA Section */}

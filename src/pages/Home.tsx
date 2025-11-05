@@ -83,7 +83,7 @@ const Home = () => {
       <Navigation />
       
       {/* Hero Section with Carousel */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden">
         <Carousel setApi={setCarouselApi} opts={{
         align: "start",
         loop: true
@@ -92,7 +92,7 @@ const Home = () => {
       })]} className="w-full h-full absolute inset-0">
           <CarouselContent className="h-full">
             {heroImages.map((image, index) => <CarouselItem key={index} className="h-full">
-                <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{
+                <div className="relative min-h-[50vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden" style={{
               backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.3), rgba(30, 41, 59, 0.3)), url(${image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
@@ -123,21 +123,15 @@ const Home = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
-                <Link to="/contact">
-                  <MessageSquare className="mr-2 w-5 h-5" />
-                  Get Quote
+                <Link to="/products">
+                  <Package className="mr-2 w-5 h-5" />
+                  View Catalog
                 </Link>
               </Button>
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/location">
                   <MapPin className="mr-2 w-5 h-5" />
                   Location
-                </Link>
-              </Button>
-              <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
-                <Link to="/products">
-                  <Package className="mr-2 w-5 h-5" />
-                  View Products
                 </Link>
               </Button>
               <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105">
@@ -151,7 +145,7 @@ const Home = () => {
         </div>
 
         {/* Dot Indicators */}
-        <div className="absolute bottom-16 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
           {heroImages.map((_, index) => <button key={index} onClick={() => carouselApi?.scrollTo(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${current === index ? "bg-white w-8" : "bg-white/50 hover:bg-white/70"}`} aria-label={`Go to slide ${index + 1}`} />)}
         </div>
       </section>
