@@ -11,7 +11,7 @@ const Footer = () => {
               ROUTERS
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Premium CNC laser cutting for wood, plywood & acrylic.
+              Premium CNC / Jaali / Laser Cutting for wood, plywood & acrylic.
             </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/routers__cnc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
@@ -83,7 +83,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ROUTERS CNC Laser. All rights reserved.
+            © {new Date().getFullYear()} ROUTERS CNC / Jaali / Laser Cutting. All rights reserved.
           </p>
         </div>
       </div>

@@ -9,7 +9,7 @@ const Services = () => {
   const services = [
     {
       icon: Zap,
-      title: "CNC & Laser Cutting",
+      title: "CNC / Jaali / Laser Cutting",
       description: "High-precision cutting for wood, acrylic, and composite materials with tolerances up to 0.1mm",
       capabilities: [
         "Wood, Plywood, Multiwood",
@@ -94,10 +94,10 @@ const Services = () => {
             <span className="text-sm font-semibold text-accent uppercase tracking-wider">What We Offer</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Precision Services
+            Precision CNC / Jaali / Laser Cutting Services
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Specializing in wood, plywood, multiwood, and acrylic cutting - from intricate Islamic art to modern architectural elements
+            Specializing in CNC routing, jaali pattern work, and laser precision for wood, plywood, multiwood, and acrylic - from intricate Islamic art to modern architectural elements
           </p>
         </div>
 

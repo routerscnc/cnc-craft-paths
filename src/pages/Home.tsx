@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LaserAnimation from "@/components/LaserAnimation";
 import heroCNC from "@/assets/hero-cnc-clean.jpg";
 import heroCNC2 from "@/assets/hero-cnc.jpg";
 import heroCNC3 from "@/assets/hero-cnc-blue.jpg";
@@ -35,7 +36,7 @@ const Home = () => {
   const features = [{
     icon: Zap,
     title: "Precision Cutting",
-    description: "Laser-accurate cuts for intricate patterns and perfect finishes"
+    description: "CNC routing, jaali pattern work, and laser-accurate cuts for intricate designs"
   }, {
     icon: Shield,
     title: "Quality Materials",
@@ -106,12 +107,12 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
             <div className="inline-block">
               <span className="inline-block px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full font-semibold text-sm mb-6 border border-primary/20 text-lime-300">
-                Premium CNC Laser Cutting Services
+                Premium CNC / Jaali / Laser Cutting Services
               </span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              Precision Laser Cutting in <span className="md:inline block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Precision CNC / Jaali / Laser Cutting in <span className="md:inline block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Wood, Plywood & Acrylic
               </span>
             </h1>
@@ -155,6 +156,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Laser Animation Section */}
+      <LaserAnimation />
+
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
         <div className="container mx-auto px-4">
@@ -191,7 +195,7 @@ const Home = () => {
               Featured Products
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explore our stunning collection of laser-cut masterpieces
+              Explore our stunning collection of CNC & laser-cut masterpieces
             </p>
           </div>
 
@@ -233,7 +237,7 @@ const Home = () => {
               Ready to Bring Your Vision to Life?
             </h2>
             <p className="text-xl opacity-90 leading-relaxed">
-              Get a custom quote for your CNC laser cutting project today. Our team is ready to help you create something extraordinary.
+              Get a custom quote for your CNC / Jaali / Laser cutting project today. Our team is ready to help you create something extraordinary.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105">

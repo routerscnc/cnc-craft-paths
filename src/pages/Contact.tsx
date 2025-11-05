@@ -75,7 +75,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-4">Get in Touch</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your project? Send us a message and we'll respond within 24 hours
+            Ready to start your CNC / Jaali / Laser cutting project? Send us a message and we'll respond within 24 hours
           </p>
         </div>
 
