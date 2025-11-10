@@ -83,7 +83,7 @@ const Home = () => {
       <Navigation />
       
       {/* Hero Section with Carousel */}
-      <section className="relative min-h-[50vh] md:min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden">
         <Carousel setApi={setCarouselApi} opts={{
         align: "start",
         loop: true
@@ -92,7 +92,7 @@ const Home = () => {
       })]} className="w-full h-full absolute inset-0">
           <CarouselContent className="h-full">
             {heroImages.map((image, index) => <CarouselItem key={index} className="h-full">
-                <div className="relative min-h-[50vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden" style={{
+                <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{
               backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.3), rgba(30, 41, 59, 0.3)), url(${image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
@@ -154,11 +154,10 @@ const Home = () => {
               </Button>
             </div>
           </div>
-        </div>
-
-        {/* Dot Indicators */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-          {heroImages.map((_, index) => <button key={index} onClick={() => carouselApi?.scrollTo(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${current === index ? "bg-white w-8" : "bg-white/50 hover:bg-white/70"}`} aria-label={`Go to slide ${index + 1}`} />)}
+          {/* Dot Indicators */}
+          <div className="flex gap-2 justify-center mt-8 mb-4">
+            {heroImages.map((_, index) => <button key={index} onClick={() => carouselApi?.scrollTo(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${current === index ? "bg-primary w-8" : "bg-muted-foreground/50 hover:bg-muted-foreground"}`} aria-label={`Go to slide ${index + 1}`} />)}
+          </div>
         </div>
       </section>
 
