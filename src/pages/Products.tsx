@@ -60,15 +60,6 @@ import luxuryGiftBoxClosed from "@/assets/products/luxury-gift-box-closed.jpg";
 import carvedWoodenDoorPanels from "@/assets/products/carved-wooden-door-panels.jpg";
 import oldSchoolWallSign from "@/assets/products/old-school-wall-sign.jpg";
 import mosqueInteriorJali from "@/assets/products/mosque-interior-jaali.jpg";
-import catalogPage2 from "@/assets/catalog/page-2.jpg";
-import catalogPage3 from "@/assets/catalog/page-3.jpg";
-import catalogPage4 from "@/assets/catalog/page-4.jpg";
-import catalogPage5 from "@/assets/catalog/page-5.jpg";
-import catalogPage6 from "@/assets/catalog/page-6.jpg";
-import catalogPage7 from "@/assets/catalog/page-7.jpg";
-import catalogPage8 from "@/assets/catalog/page-8.jpg";
-import catalogPage9 from "@/assets/catalog/page-9.jpg";
-import catalogPage10 from "@/assets/catalog/page-10.jpg";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
