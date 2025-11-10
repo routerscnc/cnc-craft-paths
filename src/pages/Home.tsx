@@ -106,24 +106,24 @@ const Home = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
             <div className="inline-block">
-              <span className="inline-block px-6 py-2 bg-primary/10 backdrop-blur-sm rounded-full font-bold text-base mb-6 border border-primary/20">
-                <span className="text-cyan-400">CNC</span>
-                <span className="text-white mx-2">|</span>
-                <span className="text-emerald-400">Jali</span>
-                <span className="text-white mx-2">|</span>
-                <span className="text-amber-400">Laser Cutting</span>
+              <span className="inline-block px-8 py-3 bg-gradient-to-r from-amber-500/20 via-emerald-500/20 to-amber-500/20 backdrop-blur-md rounded-full font-bold text-lg mb-6 border-2 border-amber-400/40 shadow-lg shadow-amber-500/20">
+                <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent drop-shadow-lg">CNC</span>
+                <span className="text-white mx-2 drop-shadow-lg">|</span>
+                <span className="bg-gradient-to-r from-emerald-400 via-green-300 to-emerald-400 bg-clip-text text-transparent drop-shadow-lg">Jali</span>
+                <span className="text-white mx-2 drop-shadow-lg">|</span>
+                <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent drop-shadow-lg">Laser Cutting</span>
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="text-white">Precision </span>
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">CNC</span>
-              <span className="text-white"> | </span>
-              <span className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">Jali</span>
-              <span className="text-white"> | </span>
-              <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Laser Cutting</span>
-              <span className="text-white"> in </span>
-              <span className="md:inline block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight drop-shadow-2xl">
+              <span className="text-white drop-shadow-lg">Precision </span>
+              <span className="bg-gradient-to-br from-amber-300 via-yellow-200 to-amber-400 bg-clip-text text-transparent drop-shadow-2xl">CNC</span>
+              <span className="text-white drop-shadow-lg"> | </span>
+              <span className="bg-gradient-to-br from-emerald-300 via-green-200 to-emerald-400 bg-clip-text text-transparent drop-shadow-2xl">Jali</span>
+              <span className="text-white drop-shadow-lg"> | </span>
+              <span className="bg-gradient-to-br from-amber-300 via-orange-200 to-amber-400 bg-clip-text text-transparent drop-shadow-2xl">Laser Cutting</span>
+              <span className="text-white drop-shadow-lg"> in </span>
+              <span className="md:inline block bg-gradient-to-br from-cyan-300 via-blue-200 to-cyan-400 bg-clip-text text-transparent drop-shadow-2xl">
                 Wood, Plywood & Acrylic
               </span>
             </h1>
